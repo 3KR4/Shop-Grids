@@ -57,15 +57,6 @@ body {
   width: 67%;
   z-index: 1;
 }
-/* .swiper-button-next {
-  width: 13px;
-  background: var(--main-color);
-  color: white;
-  padding: 8px 11px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  right: 0 !important;
-} */
 .landing .left .card div h5 {
   font-size: 17px; 
   color: var(--paragraph);
@@ -86,24 +77,13 @@ body {
   max-width: 412px;
   color: var(--paragraph);
 }
-.landing .left .card div a {
-  color: white;
-  background: var(--main-color);
-  padding: 10px 25px;
-  width: fit-content;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-.landing .left .card div a:hover {
-  background-color: var(--hover-color);
-}
 .landing .right {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.landing .left .card a {
+  width: fit-content;
 }
 .landing .right .holder {
   display: flex;
@@ -113,9 +93,6 @@ body {
   background: var(--searchBord-3);
   position: relative;
   height: 100%;
-}
-.landing .right .holder img {
-  width: 33%;
 }
 .landing .right .holder div {
   display: flex;
@@ -182,8 +159,9 @@ body {
   background-color: var(--input-color);
   align-items: center;
   transition: 0.3s;
-  border: 1px solid var(--searchBord-3);
+  border: none;
   height: 245px;
+  box-shadow: 0px 0px 20px #00000012;
 }
 .categories .card:hover {
   transform: translateY(-10px);
@@ -209,6 +187,362 @@ body {
   margin-left: 8px;
 }
 
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss categories */
+
+.Product .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.main-card {
+  color: var(--text-color);
+  border: none;
+  background-color: var(--input-color);
+  box-shadow: 0px 0px 20px #00000012;
+}
+.main-card .image {
+  position: relative;
+  overflow: hidden;
+}
+.main-card .image img {
+  width: 100%;
+  transition: 0.3s;
+}
+.main-card .image a {
+  position: absolute;
+  bottom: -60px;
+  right: 27%;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.main-card .image:hover img {
+  scale: 1.1;
+  transition: 0.3s;
+}
+.main-card .image:hover a {
+  bottom: 30px;
+  opacity: 1;
+  visibility: inherit;
+}
+.main-card .image a i {
+  font-size: 18px;
+}
+.main-card .image span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: system-ui;
+}
+.main-card .image .red {
+  background: #f73232;
+}
+.main-card .image .blue {
+  background: #0167f3;
+}
+.main-card p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--paragraph);
+}
+.main-card h3 {
+  font-size: 17px;
+  color: var(--text-color);
+  margin: 10px 0 3px;
+}
+.main-card .holder {
+  padding: 28px;
+  padding-top: 0;
+}
+.review {
+  display: flex;
+  gap: 8px;
+}
+.review .stars i {
+    color: gold;
+    font-size: 12px;
+}
+.review p {
+  position: relative;
+  top: 4px;
+  color: var(--paragraph);
+}
+.main-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--main-color);
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.main-card h4 P {
+  text-decoration: line-through;
+}
+
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss banner */
+
+.banner {
+  padding: 150px 0 90px; 
+} 
+.banner .container {
+  display: flex;
+  gap: 25px;
+}
+.banner .card {
+  background-color: var(--input-color);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 70px 40px;
+  position: relative;
+  width: 50%;
+  height: 315px;
+  border: none;
+  box-shadow: 0px 0px 20px #00000012;
+}
+.banner .card div h3 {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 25px;
+}
+.banner .card div p {
+  color: var(--paragraph);
+  max-width: 315px;
+  margin: 20px 0;
+}
+.banner .card .img1 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.banner .card div {
+  z-index: 3;
+}
+body.dark .banner .wave {
+  display: block;
+  position: absolute;
+  max-width: 54%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.banner .card div a {
+  width: fit-content;
+}
+.banner .card .wave {
+display: none;
+}
+
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss offer */
+
+.offer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.offer .bigHolder  {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 66%;
+}
+.offer .bigHolder .products  {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-gap: 20px;
+}
+.offer .main-card .image {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.offer .main-card .image img {
+  width: 80%;
+}
+.offer .bigHolder .new  {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--input-color);
+  padding: 28px 28px 50px 28px;
+  box-shadow: 0px 0px 20px #00000012;
+  position: relative;
+}
+.offer .bigHolder .new .nvidia {
+  position: absolute;
+  width: 15%;
+  top: 20px;
+  right: 0;
+}
+.offer .bigHolder .new img  {
+  width: 45%;
+}
+.offer .bigHolder .new .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  top: 32px;
+}
+.offer .bigHolder .new .text h3  {
+  color: var(--text-color);
+  font-size: 25px;
+}
+.offer .bigHolder .new .text p  {
+  max-width: 320px;
+  color: var(--paragraph);
+  text-align: right;
+}
+.offer .bigHolder .new .text span  {
+  display: block;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0 15px;
+}
+.offer .sale {
+  width: 32%;
+  background: var(--input-color);
+  box-shadow: 0px 0px 20px #00000012;
+  padding: 28px;
+  height: fit-content;
+}
+.offer .sale .image {
+  margin-bottom: 30px;
+}
+.offer .sale .image img {
+  max-width: 100%;
+}
+.offer .sale a {
+  color: var(--text-color);
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+}
+.offer .sale a:hover {
+  background-color: var(--hover-color);
+}
+.offer .sale span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.offer .sale span p {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--paragraph);
+  margin: 8px 0;
+  text-decoration: line-through;
+}
+.offer .sale p {
+  color: var(--paragraph);
+}
+.offer .sale h2 {
+  color: var(--text-color);
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 0 8px;
+}
+.offer .sale .timer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.offer .sale .timer span {
+  display: flex;
+}
+.offer .sale .timer div {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.offer .sale .timer div h4 {
+  color: var(--paragraph);
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,10 +552,6 @@ body {
 @media (min-width: 1400px) {
 
 }
-
-
-
-
 @media (min-width: 992px) {
   .landing .right .holder-2 {
     height: 100%;
@@ -252,10 +582,48 @@ body {
     width: 50%;
   }
   .landing .right .holder-2 {
-    height: 238px;
+    height: 265px;
   }
   .categories .card {
     padding: 0 18px 0 30px;
+  }
+  .banner .container {
+    flex-direction: column;
+  }
+  .banner .card {
+    width: 100%;
+  }
+  .banner .card .img1 {
+    opacity: 0.3;
+  }
+  .offer .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .offer .bigHolder {
+    width: 100%;
+  }
+  .offer .sale {
+    width: 100%;
+  }
+  .offer .bigHolder .new {
+    padding-right: 28px;
+  }
+  .offer .sale .image {
+    display: flex;
+    justify-content: center;
+  }
+  .offer .sale a {
+    font-size: 27px;
+  }
+  .offer .sale span {
+    font-size: 26px;
+  }
+  .offer .sale p {
+    max-width: 543px;
+  }
+  .sale .review {
+    font-size: 20px;
   }
 }
 
@@ -294,9 +662,34 @@ body {
     z-index: 2;
     position: absolute;
     right: -148px;
-    opacity: 0.5;
   }
   .landing .left .card {
     padding: 0 30px;
   }
+  .offer .sale p {
+    font-size: 14px;
+  }
+  .sale .review {
+    align-items: center;
+  }
+  .offer .bigHolder .new {
+    flex-direction: column;
+  }
+  .offer .bigHolder .new img {
+    width: 100%;
+  }
+  .offer .bigHolder .new .text {
+    align-items: center;
+  }
+  .offer .bigHolder .new .nvidia {
+    width: 20%;
+  }
+  .offer .bigHolder .new .text p {
+    text-align: center;
+    margin: 6px 0 0px;
+  }
+  .offer .sale h2 { 
+    font-size: 17px;
+  }
 }
+
