@@ -887,11 +887,11 @@ body.dark .nav-4 {
 
 /*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss error page */
 
-.error {
+.error-page {
   padding: 150px 0 50px
   ;
 }
-.error .container {
+.error-page .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,25 +899,25 @@ body.dark .nav-4 {
   color: white;
   gap: 25px;
 }
-.error .container h1 {
+.error-page .container h1 {
   color: var(--main-color);
   font-size: 169px;
   font-weight: 600;
   margin-bottom: -24px;
 }
-.error .container h3 {
+.error-page .container h3 {
   color: var(--text-color);
   font-size: 36px;
   font-weight: 600;
   margin-bottom: -5px;
 }
-.error .container p {
+.error-page .container p {
   color: var(--paragraph);
   max-width: 426px;
   text-align: center;
   font-size: 17px;
 }
-.error .container a {
+.error-page .container a {
   padding: 12px 30px;
   border-radius: 50px;
   background-color: var(--main-color);
@@ -926,7 +926,7 @@ body.dark .nav-4 {
 }
 
 @media (max-width:786px) {
-  .error .container h3 {
+  .error-page .container h3 {
     text-align: center;
   }
 }
