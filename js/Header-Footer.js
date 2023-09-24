@@ -119,7 +119,7 @@ mainHeader = () => {
             <h6>Total</h6>
             <h6>$134.00</h6>
           </div>
-          <a class="Check main-buttom" href="">Check Out</a>
+          <a class="Check main-buttom" href="check-out.html">Check Out</a>
         </div>
       </i>
     </div>
@@ -130,30 +130,30 @@ mainHeader = () => {
       <i class='bx bx-menu'></i>
     All Categories 
     <ul class="main-mega-menu">
-      <li><a href="">Electronics <i class="fa-solid fa-angle-right"></i></a>
+      <li><a href="shop.html">Electronics <i class="fa-solid fa-angle-right"></i></a>
       <ul class="main-mega-menu-2">
-        <li><a href="">Camcorders</a></li>
-        <li><a href="">Camera Drones</a></li>
-        <li><a href="">Smart Watches</a></li>
-        <li><a href="">Headphones</a></li>
-        <li><a href="">MP3 Players</a></li>
-        <li><a href="">Microphones</a></li>
-        <li><a href="">Chargers</a></li>
-        <li><a href="">Batteries</a></li>
-        <li><a href="">Cables & Adapters</a></li>
+        <li><a href="shop.html">Camcorders</a></li>
+        <li><a href="shop.html">Camera Drones</a></li>
+        <li><a href="shop.html">Smart Watches</a></li>
+        <li><a href="shop.html">Headphones</a></li>
+        <li><a href="shop.html">MP3 Players</a></li>
+        <li><a href="shop.html">Microphones</a></li>
+        <li><a href="shop.html">Chargers</a></li>
+        <li><a href="shop.html">Batteries</a></li>
+        <li><a href="shop.html">Cables & Adapters</a></li>
       </ul>
       </li>
-      <li><a href="">Accessories</a></li>
-      <li><a href="">Televisions</a></li>
-      <li><a href="">best selling</a></li>
-      <li><a href="">top 100 offer</a></li>
-      <li><a href="">sunglass</a></li>
-      <li><a href="">watch</a></li>
-      <li><a href="">man’s product</a></li>
-      <li><a href="">Audio & Theater</a></li>
-      <li><a href="">Tablets</a></li>
-      <li><a href="">Video Games</a></li>
-      <li><a href="">Home Appliances</a></li>
+      <li><a href="shop.html">Accessories</a></li>
+      <li><a href="shop.html">Televisions</a></li>
+      <li><a href="shop.html">best selling</a></li>
+      <li><a href="shop.html">top 100 offer</a></li>
+      <li><a href="shop.html">sunglass</a></li>
+      <li><a href="shop.html">watch</a></li>
+      <li><a href="shop.html">man’s product</a></li>
+      <li><a href="shop.html">Audio & Theater</a></li>
+      <li><a href="shop.html">Tablets</a></li>
+      <li><a href="shop.html">Video Games</a></li>
+      <li><a href="shop.html">Home Appliances</a></li>
     </ul>
   </div>
   <ul class="nav-link">
@@ -170,21 +170,20 @@ mainHeader = () => {
     </li>
     <li data-li=".mega-menu-2"><div class="title title-2"> Shop <i class="fa-solid fa-angle-down angle-down2"></i> </div>
       <ul class="mega mega-menu-2">
-        <li><a href="">Shop Grid</a></li>
-        <li><a href="">Shop List</a></li>
-        <li><a href="">Shop Single</a></li>
-        <li><a href="">Cart</a></li>
-        <li><a href="">Checkout</a></li>
+        <li><a href="shop.html">Shop Grid</a></li>
+        <li><a href="product.html">Shop Single</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
       </ul>
     </li>
     <li data-li=".mega-menu-3"><div class="title title-3">Blog <i class="fa-solid fa-angle-down angle-down3"></i> </div>
       <ul class="mega mega-menu-3">
-        <li> <a href="">Blog Grid Sidebar</a></li>
-        <li> <a href="">Blog Single</a></li>
-        <li><a href="">Blog Single Sibebar</a></li>
+        <li> <a href="blog-grid.html">Blog Grid Sidebar</a></li>
+        <li> <a href="blog-single.html">Blog Single</a></li>
+        <li><a href="blog-sidebar.html">Blog Single Sidebar</a></li>
       </ul>
     </li>
-    <li><a href="">Contact Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
   </ul>
   <h6 class="menu-med">All Categories</h6> 
   <span onclick="navLinkClick()" class="mainSpan">
@@ -288,7 +287,7 @@ modeToggle2 = document.querySelector(".darkLight2");
 let getMode = localStorage.getItem("mode");
 
 function nagi (modeToggle) {
-  if (getMode && getMode === "dark-mode") {
+  if (getMode === "dark-mode") {
     body.classList.add("dark");
   }
   modeToggle.addEventListener("click", () => {
@@ -303,7 +302,6 @@ function nagi (modeToggle) {
 }
 nagi(modeToggle1)
 nagi(modeToggle2)
-
 
 
 let libtns  = document.querySelectorAll(".nav-3 .nav-link > li")
