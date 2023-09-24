@@ -6,7 +6,7 @@ const categories = [
     info2:"Full Atx",
     info3:"Extended Atx",
     info4:"",
-    img:"img/mother.png"
+    img:"img/categories/mother.png"
   },
   {
     mainName: "Graphic Cards",
@@ -14,7 +14,7 @@ const categories = [
     info2:"Amd",
     info3:"Intel",
     info4:"",
-    img:"img/gpu.png"
+    img:"img/categories/gpu.png"
   },
   {
     mainName: "Memory",
@@ -22,7 +22,7 @@ const categories = [
     info2:"3200 MHz",
     info3:"3600 MHz",
     info4:"5000 MHz",
-    img:"img/ram.png"
+    img:"img/categories/ram.png"
   },
   {
     mainName: "Storage",
@@ -30,7 +30,7 @@ const categories = [
     info2:"External",
     info3:"Ssd",
     info4:"m.2",
-    img:"img/hdd.png"
+    img:"img/categories/hdd.png"
   },
   {
     mainName: "Procesor",
@@ -38,7 +38,7 @@ const categories = [
     info2:"Ryzen",
     info3:"Apu",
     info4:"",
-    img:"img/cpu.png"
+    img:"img/categories/cpu.png"
   },
   {
     mainName: "Power Suplay",
@@ -46,7 +46,7 @@ const categories = [
     info2:"Bronze",
     info3:"Gold",
     info4:"platinom",
-    img:"img/power.png"
+    img:"img/categories/power.png"
   },
   {
     mainName: "Computer Case",
@@ -54,7 +54,7 @@ const categories = [
     info2:"Atx",
     info3:"Tower",
     info4:"Full Tower",
-    img:"img/case1.png"
+    img:"img/categories/case1.png"
   },
   {
     mainName: "Accesories",
@@ -62,7 +62,7 @@ const categories = [
     info2:"Keyboard",
     info3:"Headphone",
     info4:"Mouse Pad",
-    img:"img/ps controlar.png"
+    img:"img/categories/ps controlar.png"
   },
   {
     mainName: "Smart Phone",
@@ -70,7 +70,7 @@ const categories = [
     info2:"Samsung",
     info3:"hawawi",
     info4:"oppo",
-    img:"img/phone.png"
+    img:"img/categories/phone.png"
   }
   ];
   let categoriesCards = document.querySelector(".categories .container")
@@ -102,7 +102,7 @@ rednderCategories();
 
 const Product = [
 {
-  img:"img/product-1.png",
+  img:"img/Products/product-1.png",
   type: "Watches",
   name:"Xiaomi Mi Band 5",
   review:"40",
@@ -115,7 +115,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-2.png",
+  img:"img/Products/product-2.png",
   type: "Speaker",
   name:"Big Power Sound Speaker",
   review:"50",
@@ -128,7 +128,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-3.png",
+  img:"img/Products/product-3.png",
   type: "Camera",
   name:"WiFi Security Camera",
   review:"36",
@@ -141,7 +141,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-4.png",
+  img:"img/Products/product-4.png",
   type: "Phones",
   name:"iphone 6x plus",
   review:"67",
@@ -154,7 +154,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-6.png",
+  img:"img/Products/product-6.png",
   type: "Speaker",
   name:"Mini Bluetooth Speaker",
   review:"22",
@@ -167,7 +167,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-5.png",
+  img:"img/Products/product-5.png",
   type: "Headphones",
   name:"Wireless Headphones",
   review:"27",
@@ -180,7 +180,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-7.png",
+  img:"img/Products/product-7.png",
   type: "Headphones",
   name:"PX7 Wireless Headphones",
   review:"86",
@@ -193,7 +193,7 @@ const Product = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/product-8.png",
+  img:"img/Products/product-8.png",
   type: "Laptop",
   name:"Apple MacBook Air",
   review:"14",
@@ -247,7 +247,7 @@ rednderProduct();
 
 const offer = [
 {
-  img:"img/offer_1.png",
+  img:"img/offer/offer_1.png",
   type: "Mouse",
   name:"XPG INFAREX M10",
   review:"68",
@@ -260,7 +260,7 @@ const offer = [
   star3:"fa-solid fa-star",
 },
 {
-  img:"img/offer_2.png",
+  img:"img/offer/offer_2.png",
   type: "Headphones",
   name:"Logitech G PRO X",
   review:"50",
@@ -273,7 +273,7 @@ const offer = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/offer_3.png",
+  img:"img/offer/offer_3.png",
   type: "Memory",
   name:"XPG D60G RGB 16GB",
   review:"36",
@@ -286,7 +286,7 @@ const offer = [
   star3:"fa-solid fa-star",
 },
 {
-  img:"img/offer_4.png",
+  img:"img/offer/offer_4.png",
   type: "Mother Board",
   name:"Asus Rog Strix Z790",
   review:"12",
@@ -299,7 +299,7 @@ const offer = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/offer_5.png",
+  img:"img/offer/offer_5.png",
   type: "Procesor",
   name:"Intel i9-12900KS",
   review:"3",
@@ -312,7 +312,7 @@ const offer = [
   star3:"fa-regular fa-star",
 },
 {
-  img:"img/offer_6.png",
+  img:"img/offer/offer_6.png",
   type: "Monitor",
   name:"Msi G244F24 170HZ",
   review:"23",
@@ -330,7 +330,7 @@ let offerCards = document.querySelector(".offer .bigHolder .products")
 
 function rednderoffer() {
 let offerItems = offer.map((item) => {
-
+  
   return`
     <div class="main-card">
       <div class="image">
@@ -363,20 +363,13 @@ let offerItems = offer.map((item) => {
   };
 rednderoffer();
 
-// counter
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss counter
 
-let countDownDate = new Date("Sep 30, 2023 23:59:59").getTime();
-// console.log(countDownDate);
-
+let countDownDate = new Date("Sep 31, 2023 23:59:59").getTime();
 let counter = setInterval(() => {
-  // Get Date Now
   let dateNow = new Date().getTime();
-
-  // Find The Date Difference Between Now And Countdown Date
   let dateDiff = countDownDate - dateNow;
 
-  // Get Time Units
-  // let days = Math.floor(dateDiff / 1000 / 60 / 60 / 24);
   let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
   let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
@@ -387,7 +380,7 @@ let counter = setInterval(() => {
   document.querySelector(".minutes span").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
   document.querySelector(".seconds span").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 
-  if (dateDiff < 0) {
-    clearInterval(counter);
-  }
-}, 1000);
+    if (dateDiff < 0) {
+      clearInterval(counter);
+    }
+  }, 1000);

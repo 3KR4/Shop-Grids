@@ -9,7 +9,6 @@
   font-family: 'Outfit';
 }
 body {
-  height: 1000vh;
   background-color: var(--body-color);
   font-family: 'Manrope', sans-serif;
   font-family: 'Outfit', sans-serif;
@@ -342,6 +341,9 @@ display: none;
 
 /*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss offer */
 
+.offer {
+  padding-bottom: 90px;
+}
 .offer .container {
   display: flex;
   justify-content: space-between;
@@ -420,10 +422,10 @@ display: none;
   max-width: 100%;
 }
 .offer .sale a {
-  color: var(--text-color);
   transition: 0.3s;
   font-size: 20px;
   font-weight: 600;
+  color: white;
 }
 .offer .sale a:hover {
   background-color: var(--hover-color);
@@ -474,16 +476,204 @@ display: none;
   font-size: 13px;
 }
 
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss services */
+
+.sellers {
+  padding: 60px 0;
+}
+.sellers .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
+  grid-gap: 30px;
+}
+.sellers .card {
+  padding: 29px;
+  background-color: var(--input-color);
+  border: none;
+}
+.sellers h1 {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  color: var(--text-color);
+  margin-bottom: 44px;
+}
+.sellers h1::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  bottom: -18px;
+  left: 0;
+  background: var(--main-color);
+}
+.sellers li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sellers img {
+  max-width: 80px;
+}
+.sellers .text h5 {
+  color: var(--text-color);
+  font-size: 16px;
+}
+.sellers .text span {
+  color: var(--paragraph);
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss brands */
+
+.brands .container {
+  background-color: var(--searchBord-3);
+  padding: 30px 0 30px 15px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.brands .container::before,
+.brands .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: var(--searchBord-3);
+  z-index: 100;
+}
+.brands .container::before {
+  left: 0;
+}
+.brands .container::after {
+  right: 0;
+}
+.brands swiper-slide {
+  max-width: 200px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brands .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 136px;
+    width: fit-content;
+    background: transparent;
+    border: none;
+    margin: 0 30px;
+}
+.brands img {
+  max-width: 100px;
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+body.dark .brands img {
+  filter: grayscale(0);
+}
+.brands img:hover {
+  filter: grayscale(0);
+}
 
 
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss latest */
 
+.latest {
+  padding: 90px 0px 50px;
+}
+.latest .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
+  grid-gap: 30px;
+}
+.latest .card {
+  background-color: var(--input-color);
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0px 0px 20px #00000012;
+}
+.latest .card .image {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  overflow: hidden;
+}
+.latest .card img {
+  width: 100%;
+}
+.latest .card .text {
+  padding: 20px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.latest .card h3 {
+  font-size: 19px;
+  color: var(--text-color);
+}
+.latest .card p:first-child {
+  margin-bottom: -8px;
+}
+.latest .card p {
+  color: var(--paragraph);
+  font-size: 14px;
+  letter-spacing: -0.1px;
+}
+.latest .card h3 {
+  transition: 0.3s;
+  font-weight: 400;
+}
+.latest .card h3:hover {
+  color: var(--hover-color);
+}
+.latest .card .main-buttom {
+  width: fit-content;
+}
 
+/*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss services */
 
-
-
-
-
-
+.services {
+  padding: 90px 0px 10px;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-gap: 20px;
+}
+.services .card {
+  background-color: var(--input-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 30px;
+  border: none;
+  transition: 0.3s;
+  box-shadow: 0px 0px 20px #00000012;
+}
+.services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.services .card i {
+  font-size: 35px;
+  color: var(--main-color);
+  margin-bottom: 17px;
+}
+.services .card h3 {
+  color: var(--text-color);
+  font-size: 17px;
+}  
+.services .card p {
+  color: var(--paragraph);
+}
 
 
 
@@ -614,7 +804,8 @@ display: none;
     justify-content: center;
   }
   .offer .sale a {
-    font-size: 27px;
+    font-size: 21px;
+    padding: 8px 0;
   }
   .offer .sale span {
     font-size: 26px;
@@ -690,6 +881,12 @@ display: none;
   }
   .offer .sale h2 { 
     font-size: 17px;
+  }
+  .brands {
+    display: none;
+  }
+  .latest {
+    padding-top: 0px;
   }
 }
 
