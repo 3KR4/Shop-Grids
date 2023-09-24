@@ -1,0 +1,264 @@
+input {
+  color: var(--paragraph);
+}
+.form {
+  padding: 235px 10px 120px;
+  overflow: hidden;
+  background-color: var(--divs-color);
+  position: relative;
+}
+.form .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form .contaienr {
+  display: flex;
+  justify-content: center;
+}
+.form .shape-two {
+  background-color: var(--main-color);
+  position: absolute;
+  width: 18%;
+  height: 36px;
+  border-top-left-radius: 5000px;
+  z-index: 99;
+  align-self: center;
+  right: 0;
+  bottom: 0px;
+}
+.form .contact {
+  background-color: var(--body-color);
+  padding: 53px 35px 55px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 550px;
+  color: var(--text-color);
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 500px;
+}
+.form h3 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+.form h2 {
+  color: var(--text-color);
+  font-size: 29px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.form p {
+  color: var(--paragraph);
+  letter-spacing: 0.2px;
+}
+.form .icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 25px 0;
+}
+.form .icons i {
+  border: 1px solid #4e6bff17;
+  padding: 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.form .icons i:hover {
+  border: 1px solid var(--main-color);
+  transition: 0.3s;
+}
+.form .icons a {
+  display: flex;
+  align-items: center;
+}
+.googeA {
+  border: 1px solid #4e6bff17;
+  padding: 11px;
+  border-radius: 8px;
+}
+.form .icons .googeA:hover {
+  border: 1px solid var(--main-color);
+  transition: 0.3s;
+}
+.google {
+  max-width: 22px;
+}
+.twitter {
+  color: #00afed;
+}
+.facebook {
+  color: #1860c1;
+  font-size: 18px;
+  padding: 13px 15px !important;
+}
+.github {
+  color: #79808a;
+}
+.form .hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.form .hr span {
+  background: var(--paragraph);
+  width: 15%;
+  height: 1px;
+  display: flex;
+}
+.form .hr p {
+  margin-bottom: 0;
+}
+.form .last-p {
+  margin-bottom: 0;
+  margin-top: 18px;
+}
+.form .last-p a {
+  color: var(--main-color);
+}
+.form .border-tops {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 0px;
+  left: 0;
+  background: var(--main-color);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+label {
+  text-align: left;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.input-field input:focus {
+  border: 1px solid var(--main-color);
+}
+form .input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+gap: 10px;
+}
+.input-field input {
+  padding: 13px 15px;
+  border: 1px solid #5c5c5c;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 14px;
+  outline: none;
+  background-color: transparent;
+}
+.input-field .show-hide {
+  position: absolute;
+  right: 13px;
+  top: 51px;
+  font-size: 19px;
+  color: #919191;
+  cursor: pointer;
+}
+.field .error {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  color: #d93025;
+  font-size: 13px;
+  display: none;
+}
+p.error-text {
+  color: #d93025;
+  text-align: left;
+  font-size: 14px;
+}
+.invalid .error {
+  display: flex;
+}
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.create-password .error {
+  align-items: flex-start;
+}
+.create-password .error-icon {
+  margin-top: 4px;
+}
+.button {
+  margin: 25px 0 6px;
+}
+.button input {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: var(--main-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+.button input:hover {
+  background-color: var(--hover-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:992px) {
+  .form {
+    padding: 110px 0 40px;
+  }
+  .form .container {
+    flex-direction: column-reverse;
+  }
+  .form .contact .input {
+    flex-direction: column;
+  }
+  .form .contact .input .name input {
+    width: 100%;
+  }
+  .form .contact .input .email input {
+    width: 100%;
+  }
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--body-color);
+    top: 100px;
+    width: 94%;
+    left: 11px;
+    padding: 20px 0 33px;
+    gap: 20px;
+    border-radius: 7px;
+}
+.user {
+  color: var(--text-color);
+}
+.bars {
+  color: var(--text-color);
+}
+}
+
+
+@media (max-width:992px) {
+  .validation {
+    padding: 0 20px;
+  }
+}
+

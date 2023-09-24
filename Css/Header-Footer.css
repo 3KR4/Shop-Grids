@@ -227,6 +227,7 @@ input {
 .header .nav-2 .holder {
   display: flex;
   gap: 35px;
+  justify-content: center;
 }
 .header .nav-2 .searsh-content {
   display: flex;
@@ -335,7 +336,7 @@ input {
 }
 .love,
 .cart,
-.them {
+.theme {
   position: relative;
   color: var(--icon-color);
   border: 2px solid var(--paragraph);
@@ -357,13 +358,13 @@ input {
   font-weight: 500;
   transition: 0.3s;
 }
-.them {
+.theme {
   font-size: 15px;
   padding: 8px;
 }
 .love:hover,
 .cart:hover,
-.them:hover,
+.theme:hover,
 .header .darkLight i:hover {
   color: white;
   background-color: var(--main-color);
@@ -622,6 +623,7 @@ input {
   padding: 0 307px;
   z-index: 200;
   background-color: var(--body-color);
+  box-shadow: 0px 0px 20px #00000042;
 }
 body.dark .header.sticky .nav-3 {
   box-shadow: rgba(0, 0, 0, 0.50) 0px 26px 12px -21px;
@@ -636,18 +638,18 @@ body.dark .header.sticky .nav-3 {
   position: relative;
   right: 85px;
 }
-.header.sticky .them-holder {
+.header.sticky .theme-holder {
   right: -250px;
   top: calc(0% + 78px);
 }
-.header.sticky .them-holder.active {
+.header.sticky .theme-holder.active {
   right: 0;
   opacity: 1;
 }
 .menu-med {
   display: none;
 }
-.them-holder {
+.theme-holder {
   position: fixed;
   top: calc(0% + 230px);
   right: -200px;
@@ -659,7 +661,7 @@ body.dark .header.sticky .nav-3 {
   z-index: 150;
   transition: 0.3s;
 }
-.them-holder::before {
+.theme-holder::before {
   content: "";
   position: absolute;
   top: 0;
@@ -668,12 +670,12 @@ body.dark .header.sticky .nav-3 {
   width: 9px;
   background-color: var(--input-color);
 }
-.them-holder.active {
+.theme-holder.active {
   opacity: 1;
   transition: 0.3s;
   right: 0;
 }
-.them-holder .holder {
+.theme-holder .holder {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -684,7 +686,7 @@ body.dark .header.sticky .nav-3 {
   border-radius: 50px;
   cursor: pointer;
 }
-.them3btn {
+.theme3btn {
   position: absolute;
   top: 0px;
   left: -43px;
@@ -698,10 +700,15 @@ body.dark .header.sticky .nav-3 {
 
 
 .nav-4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+  padding: 10px 0 28px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 23px -5px;
+}
+body.dark .nav-4 {
+  box-shadow: rgb(0 0 0 / 24%) 0px 11px 23px -5px;
+}
+.nav-4 .container {
+  display: flex;
+  justify-content: space-between;
 }
 .nav-4 h4 {
   font-size: 19px;
@@ -739,9 +746,6 @@ body.dark .header.sticky .nav-3 {
   flex-direction: column;
   padding: 20px 0 0;
 }
-.footer .container {
-
-}
 .footer .top-footer .logo span {
   color: white;
 }
@@ -759,7 +763,7 @@ body.dark .header.sticky .nav-3 {
   color: white;
   font-size: 20px;
 }
-.footer .top-footer .form {
+.footer .top-footer .input {
   display: flex;
   gap: 10px;
 }
@@ -849,9 +853,7 @@ body.dark .header.sticky .nav-3 {
 .footer .middle-footer .app img {
   width: 24px;
 }
-.footer .middle-footer .another {
 
-}
 .footer .middle-footer .another ul {
   display: flex;
   flex-direction: column;
@@ -881,6 +883,52 @@ body.dark .header.sticky .nav-3 {
 }
 .footer .bottom-footer .visa img {
   width: 55%;
+}
+
+/*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss error page */
+
+.error {
+  padding: 150px 0 50px
+  ;
+}
+.error .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 25px;
+}
+.error .container h1 {
+  color: var(--main-color);
+  font-size: 169px;
+  font-weight: 600;
+  margin-bottom: -24px;
+}
+.error .container h3 {
+  color: var(--text-color);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: -5px;
+}
+.error .container p {
+  color: var(--paragraph);
+  max-width: 426px;
+  text-align: center;
+  font-size: 17px;
+}
+.error .container a {
+  padding: 12px 30px;
+  border-radius: 50px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 500;
+}
+
+@media (max-width:786px) {
+  .error .container h3 {
+    text-align: center;
+  }
 }
 
 /*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss Media Query */
@@ -948,6 +996,7 @@ body.dark .header.sticky .nav-3 {
   }
   .header .nav-2 .searsh-content {
     justify-content: center;
+    width: 72%;
   }
   .header .nav-3 {
     position: relative;
@@ -971,7 +1020,7 @@ body.dark .header.sticky .nav-3 {
     display: block;
     color: var(--text-color);
     position: absolute;
-    left: 102px;
+    left: 43px;
     font-size: 17px;
   }
   .header .nav-3 .nav-link.active {
@@ -1007,7 +1056,7 @@ body.dark .header.sticky .nav-3 {
   .header .nav-3 {
     justify-content: space-between;
   }
-  .them-holder {
+  .theme-holder {
     right: -246px; 
     opacity: 0;
   }
@@ -1056,6 +1105,9 @@ body.dark .header.sticky .nav-3 {
   .footer .bottom-footer .visa {
     justify-content: center;
   }
+  .error {
+    padding: 80px 0 50px;
+  }
 }
 
 /*!ssssssssssssssssssssssssssssssssss 768px */
@@ -1087,6 +1139,9 @@ body.dark .header.sticky .nav-3 {
   }
   .header .nav-3 .follow{
     gap: 9px;
+  }
+  .header .nav-3 .nav-link {
+    min-width: 234px;
   }
   .nav-4 {
     justify-content: center;
@@ -1175,6 +1230,9 @@ body.dark .header.sticky .nav-3 {
   }
   .header.sticky .nav-3 .mainSpan {
     left: 20px; 
+  }
+  .header.sticky .nav-3 .products-holder {
+    right: 64px;
   }
 }
 

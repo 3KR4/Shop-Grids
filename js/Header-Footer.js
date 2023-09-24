@@ -2,7 +2,7 @@
 let header = document.querySelector(".header");
 mainHeader = () => {
   return (header.innerHTML = `
-    <button class="scrollBar"><i class="fa-solid fa-angles-up"></i></button>
+  <button class="scrollBar"><i class="fa-solid fa-angles-up"></i></button>
   <div class="nav-1">
   <div class="container">
     <div class="region">
@@ -35,8 +35,8 @@ mainHeader = () => {
       Hello
     </div>
     <div class="sign-in">
-      <a href="" class="login-border">Sign In</a>
-      <a href="">Register</a>
+      <a href="login.html" class="login-border">Sign In</a>
+      <a href="register.html">Register</a>
     </div>
   </div>
 </div>
@@ -79,7 +79,7 @@ mainHeader = () => {
         <i class="bi bi-moon-fill moon"></i>
       </div>
       
-      <i class=" fa-solid fa-circle-half-stroke them them1"></i>
+      <i class=" fa-solid fa-circle-half-stroke theme theme1"></i>
 
       <i class="fa-solid fa-heart love">
         <span>
@@ -158,17 +158,17 @@ mainHeader = () => {
   </div>
   <ul class="nav-link">
     <li><a href="index.html">Home</a></li>
-    <li onclick="megaClick1()"> <div class="title title-1">Pages <i class="fa-solid fa-angle-down angle-down1"></i></div> 
+    <li data-li=".mega-menu-1"> <div class="title title-1">Pages <i class="fa-solid fa-angle-down angle-down1"></i></div> 
     <ul class="mega mega-menu-1">
-      <li><a href="">About Us</a></li>
-      <li><a href="">Faq</a></li>
-      <li><a href="">Login</a></li>
-      <li><a href="">Register</a></li>
-      <li><a href="">Mail Success</a></li>
-      <li><a href="">404 Error</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="faq.html">Faq</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="success.html">Mail Success</a></li>
+      <li><a href="error.html">404 Error</a></li>
     </ul>
     </li>
-    <li onclick="megaClick2()"><div class="title title-2"> Shop <i class="fa-solid fa-angle-down angle-down2"></i> </div>
+    <li data-li=".mega-menu-2"><div class="title title-2"> Shop <i class="fa-solid fa-angle-down angle-down2"></i> </div>
       <ul class="mega mega-menu-2">
         <li><a href="">Shop Grid</a></li>
         <li><a href="">Shop List</a></li>
@@ -177,7 +177,7 @@ mainHeader = () => {
         <li><a href="">Checkout</a></li>
       </ul>
     </li>
-    <li onclick="megaClick3()"><div class="title title-3">Blog <i class="fa-solid fa-angle-down angle-down3"></i> </div>
+    <li data-li=".mega-menu-3"><div class="title title-3">Blog <i class="fa-solid fa-angle-down angle-down3"></i> </div>
       <ul class="mega mega-menu-3">
         <li> <a href="">Blog Grid Sidebar</a></li>
         <li> <a href="">Blog Single</a></li>
@@ -200,11 +200,11 @@ mainHeader = () => {
     <a href=""><i class="bi bi-discord discord"></i></a>
   </div>
 
-  <div class="them-holder">
+  <div class="theme-holder">
     <div class="holder">
-      <button class="them3btn"><i class=" fa-solid fa-circle-half-stroke them3"></i></button>
+      <button class="theme3btn"><i class=" fa-solid fa-circle-half-stroke theme3"></i></button>
       <span class="theme-buttons" data-color="#fe5b3d"><i style="color: #fe5b3d;" class="fa-solid fa-layer-group"></i></span>
-      <span class="theme-buttons" data-color="#0167f3"><i style="color: #1574f8;" class="fa-solid fa-layer-group"></i></span>
+      <span class="theme-buttons" data-color="#2a84ff"><i style="color: #2a84ff;" class="fa-solid fa-layer-group"></i></span>
       <span class="theme-buttons" data-color="#8e44ad"><i style="color: #8e44ad;" class="fa-solid fa-layer-group"></i></span>
       <span class="theme-buttons" data-color="#f39c12"><i style="color: #f39c12;" class="fa-solid fa-layer-group"></i></span>
       <span class="theme-buttons" data-color="#27ae60"><i style="color: #27ae60;" class="fa-solid fa-layer-group"></i></span>
@@ -219,7 +219,7 @@ mainHeader = () => {
     <i class="bi bi-moon-fill moon"></i>
   </div>
 
-  <i class=" fa-solid fa-circle-half-stroke them them2"></i>
+  <i class=" fa-solid fa-circle-half-stroke theme theme2"></i>
 
 <i class="fa-solid fa-heart love">
   <span>
@@ -264,7 +264,9 @@ mainHeader = () => {
 </i>
 </div>
 </div>
+</div>
 <div class="nav-4">
+  <div class="container">
   <h4 class="pageName1"></h4>
   <div class="pages">
     <div class="home">
@@ -274,7 +276,7 @@ mainHeader = () => {
     <i class="fa-solid fa-angle-right"></i>
     <h6 class="pageName2"></h6>
   </div>
-</div>
+  </div>
 </div>
   `);
 };
@@ -302,25 +304,31 @@ function nagi (modeToggle) {
 nagi(modeToggle1)
 nagi(modeToggle2)
 
-let megaMenu1 = document.querySelector(".mega-menu-1") 
-let megaMenu2 = document.querySelector(".mega-menu-2") 
-let megaMenu3 = document.querySelector(".mega-menu-3") 
 
-function megaClick1 () {
-  megaMenu1.classList.toggle("active")
-  megaMenu2.classList.remove("active")
-  megaMenu3.classList.remove("active")
+
+let libtns  = document.querySelectorAll(".nav-3 .nav-link > li")
+let allmega = document.querySelectorAll(".nav-3 .mega") 
+
+libtns.forEach((li) => {
+  li.addEventListener("click", liActive)
+  li.addEventListener("click", megaActive)
+})
+
+function liActive () {
+  libtns.forEach((li) => {
+    li.classList.remove("active")
+    this.classList.add("active")
+  })
 }
-function megaClick2 () {
-  megaMenu2.classList.toggle("active")
-  megaMenu1.classList.remove("active")
-  megaMenu3.classList.remove("active")
+function megaActive () {
+  allmega.forEach((mega) => {
+    mega.classList.remove("active")
+  })
+  document.querySelectorAll(this.dataset.li).forEach((el) => {
+    el.classList.toggle("active")
+  })
 }
-function megaClick3 () {
-  megaMenu3.classList.toggle("active")
-  megaMenu1.classList.remove("active")
-  megaMenu2.classList.remove("active")
-}
+
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
@@ -334,29 +342,30 @@ function navLinkClick () {
   bar3.classList.toggle("active")
 }
 
-let themBtn1 = document.querySelector(".them1")
-let themBtn2 = document.querySelector(".them2")
-let themBtn3 = document.querySelector(".them3btn")
-let themico3 = document.querySelector(".them3")
-let themHolder = document.querySelector(".them-holder")
+let themeBtn1 = document.querySelector(".theme1")
+let themeBtn2 = document.querySelector(".theme2")
+let themeBtn3 = document.querySelector(".theme3btn")
+let themeico3 = document.querySelector(".theme3")
+let themeHolder = document.querySelector(".theme-holder")
 
-function nagi2 (themsBtn) {
-  themsBtn.addEventListener("click", () => {
-    themHolder.classList.toggle("active")
-    if (themHolder.classList.contains("active")) {
-      themico3.classList.replace("fa-circle-half-stroke","fa-x")
+function nagi2 (themesBtn) {
+  themesBtn.addEventListener("click", () => {
+    themeHolder.classList.toggle("active")
+    if (themeHolder.classList.contains("active")) {
+      themeico3.classList.replace("fa-circle-half-stroke","fa-x")
     } else {
-      themico3.classList.replace("fa-x","fa-circle-half-stroke")
+      themeico3.classList.replace("fa-x","fa-circle-half-stroke")
     }
   })
 }
-nagi2(themBtn1)
-nagi2(themBtn2)
-nagi2(themBtn3)
+nagi2(themeBtn1)
+nagi2(themeBtn2)
+nagi2(themeBtn3)
 
 
+let startSteaky = document.querySelector(".nav-3")
 window.addEventListener("scroll", function () {
-  header.classList.toggle("sticky", window.scrollY > 225);
+  header.classList.toggle("sticky", window.scrollY > startSteaky.offsetTop);
 });
 
 function pageNameChanger1 () {
@@ -390,16 +399,28 @@ scrollBar.onclick = function () {
 };
 
 let themeButtons = document.querySelectorAll(".theme-buttons")
-let themBlue = document.querySelectorAll(".themBlue")
 
-themeButtons.forEach(color =>{
-  color.addEventListener('click', () => {
-  let dataColor = color.getAttribute('data-color');
-  document.querySelector(':root').style.setProperty('--main-color', dataColor);
+if (window.localStorage.getItem("theme")) {
+  document.querySelector(':root').style.setProperty('--main-color', window.localStorage.getItem("theme"));
+} else {
+  console.log("no");
+}
+
+themeButtons.forEach((btn) =>{
+  btn.addEventListener('click', (e) => {
+  
+  themeButtons.forEach((li) => {
+    li.classList.remove("active")
+  })
+  e.currentTarget.classList.add("active")
+
+  window.localStorage.setItem("theme", e.currentTarget.dataset.color)
+
+  document.querySelector(':root').style.setProperty('--main-color', e.currentTarget.dataset.color);
   });
 });
 
-//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss counter
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
 
 let footer = document.querySelector(".footer");
 mainFooter = () => {
@@ -416,7 +437,7 @@ mainFooter = () => {
           <h4>Subscribe to our Newsletter</h4>
           <p>Get all the latest information, Sales and Offers.</p>
       </div>
-      <div class="form">
+      <div class="input">
           <input name="EMAIL" placeholder="Email address here..." type="email">
           <button class="main-buttom">Subscribe<span class="dir-part"></span></button>
       </div>
@@ -487,3 +508,15 @@ mainFooter = () => {
   `);
 };
 mainFooter();
+
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss about video
+
+const video = document.querySelector(".video")
+function openVideo() {
+  video.classList.add("videoClicked")
+  document.body.style.setProperty("overflow", "hidden")
+}
+function closeVideo() {
+  video.classList.remove("videoClicked")
+  document.body.style.removeProperty("overflow")
+}
