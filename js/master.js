@@ -216,10 +216,10 @@ let productItems = Product.map((item) => {
     <div class="main-card">
       <div class="image">
         <img src="${item.img}" alt="">
-        <a class="main-buttom" href="">
+        <button onclick="calculation()" class="main-buttom">
           <i class="bi bi-cart2"></i>
           Add To Cart
-        </a>
+        </button>
         <span class="${item.infoClass}">${item.info}</span>
       </div>
       <div class="holder">
@@ -335,10 +335,10 @@ let offerItems = offer.map((item) => {
     <div class="main-card">
       <div class="image">
         <img src="${item.img}" alt="">
-        <a class="main-buttom" href="">
+        <button onclick="calculation()" class="main-buttom">
           <i class="bi bi-cart2"></i>
           Add To Cart
-        </a>
+        </button>
         <span class="${item.infoClass}">${item.info}</span>
       </div>
       <div class="holder">

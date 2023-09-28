@@ -30,7 +30,6 @@
     <div class="container">
       <div class="cont">
         <div class="categories" data-aos="fade-up" data-aos-duration="1200">
-  
           <div class="type">
             <h4>All Categories</h4>
             <div class="holder">
@@ -62,56 +61,78 @@
               <span>(512)</span>
             </div>
           </div>
-  
           <div class="customizs">
-            <h4>Filter By Price</h4>
-            <input class="range" type="range" min="0" max="100">
-            <span class="price">$0 - $500</span>
-  
-            <h4>Filter By brands</h4>
-            <input data-filter="Hardware" type="checkbox" id="small" name="size" value="small">
-            <label for="Small">Hardware (2,319)</label><br>
-            <input data-filter="Accessories" type="checkbox" id="Medium" name="size" value="Medium">
-            <label for="Medium">Accessories</label><br>
-            <input data-filter="Other" type="checkbox" id="Large" name="size" value="Large">
-            <label for="Large">Other (1,392)</label><br>
-  
-            <h4 class="last-h4">COLOR</h4>
-            <div class="color">
-              <span class="red"></span>
-              <h5>Red (2,429)</h5>
+            <div class="range-place">
+              <div class="wrapper">
+                <header>
+                  <h4>Filter By Price</h4>
+                  <p>enter min and max price</p>
+                </header>
+                <div class="price-input">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" class="input-min" value="2500">
+                  </div>
+                  <div class="separator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" class="input-max" value="7500">
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                  <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                </div>
+              </div>
             </div>
-            <div class="color">
-              <span class="green"></span>
-              <h5>Green (2,429)</h5>
+            <form class="filter-place">
+              <h4>Filter By brands</h4>
+              <ul class="indicator">
+                <li class="active" data-filter="All"><i class="bi bi-check"></i> ALL</li>
+                <li data-filter="Hardware"><i class="bi bi-check"></i> Hardware</li>
+                <li data-filter="Accessories"><i class="bi bi-check"></i> Accessories</li>
+                <li data-filter="Other"><i class="bi bi-check"></i> Other</li>
+              </ul>
+            </form>
+            <div class="color-place">
+              <h4 class="last-h4">COLOR</h4>
+              <div class="color">
+                <span class="red"></span>
+                <h5>Red (2,429)</h5>
+              </div>
+              <div class="color">
+                <span class="green"></span>
+                <h5>Green (2,429)</h5>
+              </div>
+              <div class="color">
+                <span class="blue"></span>
+                <h5>Blue (2,429)</h5>
+              </div>
+              <div class="color">
+                <span class="purple"></span>
+                <h5>Purple (2,429)</h5>
+              </div>
             </div>
-            <div class="color">
-              <span class="blue"></span>
-              <h5>Blue (2,429)</h5>
-            </div>
-            <div class="color">
-              <span class="purple"></span>
-              <h5>Purple (2,429)</h5>
-            </div>
-  
           </div>
         </div>
-  
+
         <div class="shop-all" data-aos="fade-down" data-aos-duration="1500">
           <div class="latest">
             <div class="btns">
               <div class="puttons">
                 <h4>Sort by:</h4> 
-                <button onclick="ulActive()" class="ptn-holder">REFERNCE <i class="fa-solid fa-caret-down"></i>
-                  <ul class="ptn-ul">
-                    <li>Relevance</li>
-                    <li>Name,A to Z</li>
-                    <li>Name,Z to A</li>
-                    <hr style="margin:10px 0 ;">
-                    <li>Price, Low to High</li>
-                    <li>Price, High to Low</li>
-                  </ul>
-                </button>
+                <!--! 1 -->
+                <select name="" id="select">
+                  <option value="Default">Default</option>
+                  <option value="LowToHigh">price, Low to high</option>    
+                  <option value="HighToLow">price, High to low</option>
+                  <option value="A to Z">Name, A to Z</option>
+                  <option value="Z to A">Name, Z to A</option>
+                </select>
+                <!--! 1 -->
               </div>
               <div class="grids">
                 <i class="bi bi-grid"></i>
@@ -124,7 +145,7 @@
           </div>
           <div class="num" data-aos="fade-up" data-aos-duration="1200">
             <a href="#"><i class="fa-solid fa-angle-left"></i></a>
-            <a class="active-ico" href="#">1</a>
+            <a class="active" href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
@@ -132,13 +153,7 @@
             <a href="#"><i class="fa-solid fa-angle-right"></i></a>
           </div>
         </div>
-  
-  
-  
-
-  
       </div>
-
     </div>
   </div>
   <div class="footer">

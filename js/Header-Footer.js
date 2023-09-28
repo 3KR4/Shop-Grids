@@ -4,7 +4,7 @@ mainHeader = () => {
   return (header.innerHTML = `
   <button class="scrollBar"><i class="fa-solid fa-angles-up"></i></button>
   <div class="nav-1">
-  <div class="container">
+    <div class="container">
     <div class="region">
       <ul>
         <li class="currency">
@@ -39,10 +39,10 @@ mainHeader = () => {
       <a href="register.html">Register</a>
     </div>
   </div>
-</div>
-</div>
-<div class="container">
-<div class="nav-2">
+    </div>
+  </div>
+  <div class="container">
+  <div class="nav-2">
     <a class="logo" href="index.html">
       <i class="bi bi-basket"></i>
       Shop
@@ -88,7 +88,7 @@ mainHeader = () => {
       </i>
       <i class="fa-solid fa-cart-shopping cart">
         <span>
-          2
+          0
         </span>
         <div class="main-cart">
           <div class="item">
@@ -124,8 +124,9 @@ mainHeader = () => {
       </i>
     </div>
 
-</div>
-<div class="nav-3">
+  </div>
+  <div class="nav-3">
+  <div class= "navHolder"> 
   <div class="categories">
       <i class='bx bx-menu'></i>
     All Categories 
@@ -158,30 +159,45 @@ mainHeader = () => {
   </div>
   <ul class="nav-link">
     <li><a href="index.html">Home</a></li>
-    <li data-li=".mega-menu-1"> <div class="title title-1">Pages <i class="fa-solid fa-angle-down angle-down1"></i></div> 
-    <ul class="mega mega-menu-1">
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="faq.html">Faq</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="success.html">Mail Success</a></li>
-      <li><a href="error.html">404 Error</a></li>
-    </ul>
+    <li>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Pages
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="about.html">About Us</a></li>
+          <li><a class="dropdown-item" href="faq.html">Faq</a></li>
+          <li><a class="dropdown-item" href="login.html">Login</a></li>
+          <li><a class="dropdown-item" href="register.html">Register</a></li>
+          <li><a class="dropdown-item" href="success.html">Mail Success</a></li>
+          <li><a class="dropdown-item" href="error.html">404 Error</a></li>
+        </ul>
+      </div>
     </li>
-    <li data-li=".mega-menu-2"><div class="title title-2"> Shop <i class="fa-solid fa-angle-down angle-down2"></i> </div>
-      <ul class="mega mega-menu-2">
-        <li><a href="shop.html">Shop Grid</a></li>
-        <li><a href="product.html">Shop Single</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="checkout.html">Checkout</a></li>
-      </ul>
+    <li>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Shop
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="shop.html">Shop Grid</a></li>
+          <li><a class="dropdown-item" href="product.html">Shop Single</a></li>
+          <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+          <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
     </li>
-    <li data-li=".mega-menu-3"><div class="title title-3">Blog <i class="fa-solid fa-angle-down angle-down3"></i> </div>
-      <ul class="mega mega-menu-3">
-        <li> <a href="blog-grid.html">Blog Grid Sidebar</a></li>
-        <li> <a href="blog-single.html">Blog Single</a></li>
-        <li><a href="blog-sidebar.html">Blog Single Sidebar</a></li>
-      </ul>
+    <li>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Blog
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="blog-grid.html">Blog Grid Sidebar</a></li>
+          <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+          <li><a class="dropdown-item" href="blog-sidebar.html">Blog Single Sidebar</a></li>
+        </ul>
+      </div>
     </li>
     <li><a href="contact.html">Contact Us</a></li>
   </ul>
@@ -198,7 +214,6 @@ mainHeader = () => {
     <a href=""><i class="bi bi-messenger"></i></a>
     <a href=""><i class="bi bi-discord discord"></i></a>
   </div>
-
   <div class="theme-holder">
     <div class="holder">
       <button class="theme3btn"><i class=" fa-solid fa-circle-half-stroke theme3"></i></button>
@@ -210,7 +225,6 @@ mainHeader = () => {
       <span class="theme-buttons" data-color="#e84393"><i style="color: #e84393;" class="fa-solid fa-layer-group"></i></span>
     </div>
   </div>
-
 
   <div class="products-holder">
   <div class="darkLight darkLight2">
@@ -263,8 +277,9 @@ mainHeader = () => {
 </i>
 </div>
 </div>
-</div>
-<div class="nav-4">
+  </div>
+  </div>
+  <div class="nav-4">
   <div class="container">
   <h4 class="pageName1"></h4>
   <div class="pages">
@@ -276,7 +291,8 @@ mainHeader = () => {
     <h6 class="pageName2"></h6>
   </div>
   </div>
-</div>
+
+  </div>
   `);
 };
 mainHeader();
@@ -303,29 +319,6 @@ function nagi (modeToggle) {
 nagi(modeToggle1)
 nagi(modeToggle2)
 
-
-let libtns  = document.querySelectorAll(".nav-3 .nav-link > li")
-let allmega = document.querySelectorAll(".nav-3 .mega") 
-
-libtns.forEach((li) => {
-  li.addEventListener("click", liActive)
-  li.addEventListener("click", megaActive)
-})
-
-function liActive () {
-  libtns.forEach((li) => {
-    li.classList.remove("active")
-    this.classList.add("active")
-  })
-}
-function megaActive () {
-  allmega.forEach((mega) => {
-    mega.classList.remove("active")
-  })
-  document.querySelectorAll(this.dataset.li).forEach((el) => {
-    el.classList.toggle("active")
-  })
-}
 
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
@@ -396,27 +389,99 @@ scrollBar.onclick = function () {
   });
 };
 
-let themeButtons = document.querySelectorAll(".theme-buttons")
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss theme
 
-if (window.localStorage.getItem("theme")) {
-  document.querySelector(':root').style.setProperty('--main-color', window.localStorage.getItem("theme"));
-} else {
-  console.log("no");
+  let themeButtons = document.querySelectorAll(".theme-buttons")
+
+  if (window.localStorage.getItem("theme")) {
+    document.querySelector(':root').style.setProperty('--main-color', window.localStorage.getItem("theme"));
+
+    if (window.localStorage.getItem("theme") === "#2a84ff") {
+      document.querySelector(':root').style.setProperty('--hover-color',  window.localStorage.getItem("hover")); 
+    } else if (window.localStorage.getItem("theme") !== "#2a84ff") {
+      document.querySelector(':root').style.setProperty('--hover-color', "#0167f3");
+    }
+  }
+
+  themeButtons.forEach((btn) =>{
+    btn.addEventListener('click', (e) => {
+    
+    themeButtons.forEach((li) => {
+      li.classList.remove("active")
+    })
+    e.currentTarget.classList.add("active")
+  
+    window.localStorage.setItem("theme", e.currentTarget.dataset.color)
+    window.localStorage.setItem("hover", "#0e3f81")
+  
+    document.querySelector(':root').style.setProperty('--main-color', e.currentTarget.dataset.color);
+
+        if (window.localStorage.getItem("theme") === "#2a84ff") {
+          document.querySelector(':root').style.setProperty('--hover-color',  window.localStorage.getItem("hover")); 
+        } else if (window.localStorage.getItem("theme") !== "#2a84ff") {
+          document.querySelector(':root').style.setProperty('--hover-color', "#0167f3");
+        }
+    });
+  });
+
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss cart
+
+let quantity = []
+
+let increment = (id) => {
+  let search = quantity.find((x) => x.id === id)
+  if (search === undefined) {
+    quantity.push({
+      id: id,
+      item: 1,
+    })
+  } else {
+    search.item += 1
+  }
+  update (id)
 }
 
-themeButtons.forEach((btn) =>{
-  btn.addEventListener('click', (e) => {
-  
-  themeButtons.forEach((li) => {
-    li.classList.remove("active")
-  })
-  e.currentTarget.classList.add("active")
+let decrement = (id) => {
+  let search = quantity.find((x) => x.id === id)
+  if (search.item === 0) return
+  else {
+    search.item -= 1
+  }
+  update (id)
+}
 
-  window.localStorage.setItem("theme", e.currentTarget.dataset.color)
+let update = (id) => {
+  let search = quantity.find((x) => x.id === id)
+  document.getElementById(id).innerHTML = search.item
+}
 
-  document.querySelector(':root').style.setProperty('--main-color', e.currentTarget.dataset.color);
-  });
-});
+// let basket = []
+
+// let incrementcart = (id) => {
+//   let search = basket.find((x) => x.id === id)
+//   if (search === undefined) {
+//     basket.push({
+//       id: id,
+//       item: 1,
+//     })
+//   } else {
+//     search.item += 1
+//   }
+//   updateCart(id)
+// }
+
+// let updateCart = (id) => {
+//   let search = basket.find((x) => x.id === id)
+//   document.getElementById(id).innerHTML = search.item
+//   calculation()
+// }
+
+
+// let calculation = () => {
+//   let cartIcon = document.querySelector(".nav-2 .products-holder .cart span")
+//   console.log(cartIcon);
+//   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y) => x + y, 0)
+// }
 
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
 
@@ -518,3 +583,12 @@ function closeVideo() {
   video.classList.remove("videoClicked")
   document.body.style.removeProperty("overflow")
 }
+
+
+
+
+
+
+
+
+
