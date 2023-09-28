@@ -1125,7 +1125,17 @@ header.sticky .dropdown-menu {
   .team {
     padding-top: 0;
   }
-
+  .form .container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .form .info-contact {
+    width: 50%;
+    align-self: flex-start;
+  }
+  .form .contact {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1201,10 +1211,21 @@ header.sticky .dropdown-menu {
   .grid .container .video .iframe {
     height: 26%;
   }
-
+  .form .info-contact {
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .grid .container .video .iframe {
     height: 32%;
+  }
+  .form .contact .input {
+    flex-direction: column;
+  }
+  .form .contact .input div {
+    width: 100%;
+  }
+  .form .main-buttom {
+    width: 100%;
   }
 }
