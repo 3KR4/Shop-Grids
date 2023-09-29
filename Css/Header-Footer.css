@@ -18,14 +18,15 @@ body {
   --body-color:   #f4f7fa;
   --main-color:   #fe5b3d;
   --text-color:   #2f2f2f;
-  --text-color-2: #fff;
+  --text-color-2: #edededa1;
   --paragraph :   #7f858f;
   --icon-color:   #888888;
   --input-color:  #fff;
   --input-color2: #081828;
+  --input-color3: #081828;
   --searchBord:   #d9d9d9;
   --searchBord-2: #fe5b3d;
-  --searchBord-3: #eeeeee;
+  --searchBord-3: #d6d6d6;
   --hover-color:  #0167f3;
   --border-color: #e9e9e9;
   --shadow-color: #;
@@ -33,10 +34,12 @@ body {
 body.dark {
   --body-color:   #171918;
   --text-color:   #fff;
+  --text-color-2: #232625;
   --paragraph :   #79808a;
   --icon-color:   #fff;
   --input-color:  #232625;
   --input-color2: #232625;
+  --input-color3: #171918;
   --searchBord:   #171918;
   --searchBord-2: #171918;
   --searchBord-3: #232625;
@@ -543,6 +546,9 @@ html::-webkit-scrollbar-thumb {
   padding: 20px 0;
   border-top: 1px solid #cccccc;
 }
+.main-cart .Check {
+  width: 100%;
+}
 
 .header .nav-3 {
   display: flex;
@@ -814,7 +820,7 @@ body.dark .header.sticky .nav-3 {
 
 
 .nav-4 {
-  padding: 10px 0 28px;
+  padding: 17px 0 28px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 23px -5px;
 }
 body.dark .nav-4 {

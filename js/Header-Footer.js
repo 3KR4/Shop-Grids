@@ -119,7 +119,7 @@ mainHeader = () => {
             <h6>Total</h6>
             <h6>$134.00</h6>
           </div>
-          <a class="Check main-buttom" href="check-out.html">Check Out</a>
+          <a class="Check main-buttom" href="checkout.html">Check Out</a>
         </div>
       </i>
     </div>
@@ -181,8 +181,8 @@ mainHeader = () => {
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="shop.html">Shop Grid</a></li>
-          <li><a class="dropdown-item" href="product.html">Shop Single</a></li>
-          <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+          <li><a class="dropdown-item" href="product.html">Product</a></li>
+          <li><a class="dropdown-item" href="cart.html">Product Cart</a></li>
           <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
         </ul>
       </div>
@@ -201,7 +201,6 @@ mainHeader = () => {
     </li>
     <li><a href="contact.html">Contact Us</a></li>
   </ul>
-  <h6 class="menu-med">All Categories</h6> 
   <span onclick="navLinkClick()" class="mainSpan">
     <span class="bar1"></span>
     <span class="bar2"></span>
