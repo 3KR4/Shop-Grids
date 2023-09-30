@@ -26,7 +26,7 @@ body {
   --input-color3: #081828;
   --searchBord:   #d9d9d9;
   --searchBord-2: #fe5b3d;
-  --searchBord-3: #d6d6d6;
+  --searchBord-3: #e4e4e4;
   --hover-color:  #0167f3;
   --border-color: #e9e9e9;
   --shadow-color: #;
@@ -1012,6 +1012,10 @@ body.dark .nav-4 {
   .header .nav-2 .hot-line {
     display: none;
   }
+  .footer .top-footer .holder {
+    gap: 23px;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1131,10 +1135,6 @@ body.dark .nav-4 {
   }
   .footer .top-footer {
     padding: 15px 0 60px;
-  }
-  .footer .top-footer .holder {
-    gap: 23px;
-    flex-direction: column;
   }
   .footer .top-footer {
     justify-content: center;

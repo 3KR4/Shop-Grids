@@ -93,7 +93,7 @@ mainHeader = () => {
         <div class="main-cart">
           <div class="item">
             <h6>2 Items</h6>
-            <a href="">View Cart</a>
+            <a href="cart.html">View Cart</a>
           </div>
           <div class="cards">
             <div class="card">
@@ -245,7 +245,7 @@ mainHeader = () => {
   <div class="main-cart">
     <div class="item">
       <h6>2 Items</h6>
-      <a href="">View Cart</a>
+      <a href="cart.html">View Cart</a>
     </div>
     <div class="cards">
       <div class="card">

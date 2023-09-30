@@ -795,7 +795,7 @@ body.dark .brands img {
   color: white;
   background-color: var(--main-color);
 }
-.form .contact {
+.contact {
   background-color: var(--body-color);
   padding: 53px 35px 35px;
   border-radius: 7px;
@@ -805,26 +805,26 @@ body.dark .brands img {
   border: 1px solid var(--searchBord-3);
   width: 66%;
 }
-.form .contact img {
+.contact img {
   position: absolute;
   width: 55px;
   right: 36px;
   top: 30px;
 }
-.form .contact label {
+.contact label {
   font-size: 14px;
   color: var(--text-color);
   margin-bottom: 10px;
 }
-.form .contact .input {
+.contact .input {
   display: flex;
   gap: 35px;
   margin-bottom: 30px;
 }
-.form .contact .input div {
+.contact .input div {
   width: 50%;
 }
-.form .contact .input input {
+.contact .input input {
   background-color: var(--input-color);
   padding: 12px 15px;
   border-radius: 7px;
@@ -835,18 +835,18 @@ body.dark .brands img {
   width: 100%;
   border: 1px solid var(--searchBord-3);
 }
-.form .contact .input input:focus {
+.contact .input input:focus {
   border: 1px solid var(--main-color);
 }
-.form .contact .textarea {
+.contact .textarea {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.form .contact .textarea label {
+.contact .textarea label {
   margin-bottom: 0px;
 }
-.form .contact .textarea textarea {
+.contact .textarea textarea {
   background-color: var(--input-color);
   font-size: 16px;
   padding: 14px 22px;
@@ -854,7 +854,7 @@ body.dark .brands img {
   border-radius: 8px;
   border: 1px solid var(--searchBord-3);
 }
-.form .contact .textarea textarea:focus {
+.contact .textarea textarea:focus {
   border: 1px solid var(--main-color);
 }
 .form .main-buttom {
@@ -939,7 +939,7 @@ body.dark .brands img {
   flex-direction: column;
   gap: 40px;
   padding: 0;
-  max-width: 70%;
+  max-width: 68%;
 }
 .blog .latest .main-holder {
   display: grid;
@@ -965,38 +965,44 @@ body.dark .brands img {
   color: white;
   background-color: var(--main-color);
 }
-.blog .holder {
+.blog-holder {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.blog h6 {
+.blog-holder h6 {
   color: var(--text-color);
   margin-bottom: 17px;
 }
-.blog .holder .search {
+.blog-holder .search {
   padding: 30px;
   background: var(--input-color);
   color: var(--text-color);
   box-shadow: 0px 0px 20px #00000012;
 }
-.blog .holder form {
+.blog-holder form {
   position: relative;
 }
-.blog .holder .search h5 {
+.blog-holder .search h5 {
   font-size: 16px;
   margin-bottom: 17px;
 }
-.blog .holder form input {
+.blog-holder form input {
   width: 100%;
   height: 50px;
   padding: 13px;
-  color: black;
+  color: var(--text-color);
   border-radius: 4px;
   box-shadow: 0px 0px 20px #00000012;
   border: 1px solid var(--searchBord-3);
+  background: var(--body-color);
+  height: 58px;
 }
-.blog .holder form button {
+.blog-holder form input:focus {
+  outline: none;
+  border: 1px solid var(--main-color);
+}
+.blog-holder form button {
   background: var(--main-color);
   border: none;
   color: white;
@@ -1004,79 +1010,306 @@ body.dark .brands img {
   height: 42px;
   border-radius: 4px;
   position: absolute;
-  right: 5px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
 }
-.blog .blog2 {
+.blog-holder .blog2 {
   box-shadow: 0px 0px 20px #00000012;
   padding: 30px 30px 16px;
   background: var(--input-color);
 }
-.blog .blog2 .box {
+.blog-holder .blog2 .box {
   display: flex;
   gap: 18px;
   align-items: center;
   margin-bottom: 25px;
 }
-.blog .blog2 .box img {
+.blog-holder .blog2 .box img {
   width: 80px;
   border-top-right-radius: 27px;
   border-top-left-radius: 9px;
 }
-.blog .blog2 h4 {
+.blog-holder .blog2 h4 {
   color: var(--text-color);
   font-size: 16px;
   margin-bottom: 17px;
 }
-.blog .blog2 .box span {
+.blog-holder .blog2 .box span {
   color: var(--paragraph);
   font-size: 14px;
 }
-.blog .blog2 .box i {
+.blog-holder .blog2 .box i {
   color: var(--paragraph);
   margin-right: 4px;
 }
-.blog .blog3 {
+.blog-holder .blog3 {
   box-shadow: 0px 0px 20px #00000012;
   background: var(--input-color);
   padding: 30px;
 }
-.blog .blog3 ul {
+.blog-holder .blog3 ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.blog .blog3 li {
+.blog-holder .blog3 li {
   color: var(--paragraph);
 }
-.blog .blog3 li a {
+.blog-holder .blog3 li a {
   color: var(--paragraph);
   transition: 0.3s;
   margin-right: 5px;
 }
-.blog .blog3 li a:hover {
+.blog-holder .blog3 li a:hover {
   color: var(--main-color);
 }
-.blog .blog4 {
+.blog-holder .blog4 {
   box-shadow: 0px 0px 20px #00000012;
   padding: 30px;
   background: var(--input-color);
 }
-.blog .blog4 .tags {
+.blog-holder .blog4 .tags {
   display: flex;
   flex-wrap: wrap;
 }
-.blog .blog4 .tags a {
+.blog-holder .blog4 .tags a {
   color: var(--paragraph);
   font-size: 15px;
   padding: 11px 10px;
   border-radius: 5px;
   transition: 0.3s;
 }
-.blog .blog4 .tags a:hover {
+.blog-holder .blog4 .tags a:hover {
   color: white;
   background-color: var(--main-color);
+}
+
+/*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss BlogSingle*/
+
+.blogSingle .container {
+  background-color: var(--input-color);
+  padding: 70px 40px;
+  border: 1px solid var(--searchBord-3);
+}
+.blogSingle .holder > h3 {
+  color: var(--text-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.blogSingle p {
+  color: var(--paragraph);
+  margin-bottom: 25px;
+}
+.blogSingle .holder {
+  display: flex;
+  flex-direction: column;
+}
+.blogSingle .holder img {
+  max-width: 85%;
+  align-self: center;
+  margin-bottom: 60px;
+}
+.blogSingle .holder .firstUl {
+  display: flex;
+  gap: 25px;
+  margin: 4px 0 20px;
+}
+.blogSingle .holder .firstUl li {
+  color: var(--paragraph);
+}
+.blogSingle .holder .firstUl li i {
+  color: var(--main-color);
+}
+.blogSingle .holder .bigP {
+  margin-bottom: 30px;
+}
+.blogSingle .holder .SecondUl {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blogSingle .holder .SecondUl li {
+  color: var(--paragraph);
+  display: flex;
+  align-items: center;
+}
+.blogSingle .holder .SecondUl li i {
+  color: var(--main-color);
+  margin-right: 7px;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+  padding: 2px 3px;
+  font-size: 11px;
+}
+.blogSingle .holder .secondP {
+  color: var(--paragraph);
+  margin: 30px 0;
+  letter-spacing: 0.3px;
+}
+.blogSingle .holder .icoDiv {
+  padding: 40px 0 27px;
+  border: 1px solid var(--searchBord-3);
+  position: relative;
+  margin: 35px 0 30px;
+}
+.blogSingle .holder .icoDiv i {
+  position: absolute;
+  font-size: 50px;
+  color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+  top: -22px;
+}
+.blogSingle .holder .icoDiv h3 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+.blogSingle .holder .icoDiv p {
+  text-align: center;
+  margin-bottom: 7px;
+}
+.blogSingle .holder .smallHolder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogSingle .holder .smallHolder div a {
+    margin-right: 10px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.blogSingle .holder .smallHolder div a:hover {
+  color: var(--main-color);
+}
+.blogSingle .holder .smallHolder .follow i {
+  border: none;
+}
+.blogSingle .holder .smallHolder .follow {
+  gap: 5px;
+}
+.blogSingle .ReviewS {
+  gap: 32px;
+  background: var(--input-color);
+  padding: 90px 117px 70px;
+  display: flex;
+  flex-direction: column;
+}
+.blogSingle .ReviewS h1 {
+  color: var(--text-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.blogSingle .ReviewS h3 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+.blogSingle .ReviewS .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 40px;
+  gap: 30px;
+  position: relative;
+}
+.blogSingle .ReviewS .card.centerCard {
+  align-self: center;
+}
+.blogSingle .ReviewS .card .replay {
+  border: none;
+  color: var(--paragraph);
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: transparent;
+  transition: 0.3s;
+}
+.blogSingle .ReviewS .card .replay:hover {
+  color: var(--main-color);
+}
+.blogSingle .ReviewS .card img {
+  width: 70px;
+  border-radius: 50px;
+  align-self: flex-start;
+}
+.blogSingle .ReviewS .card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.blogSingle .ReviewS .card .text h3 {
+  font-size: 16px;
+  color: var(--text-color);
+}
+.blogSingle .ReviewS .card .text p {
+  font-size: 16px;
+  color: var(--paragraph);
+  margin-bottom: 3px;
+}
+.blogSingle .ReviewS .card .text p:last-child {
+  margin-top: 10px;
+}
+.blogSingle .ReviewS .card .text .stars {
+  color: var(--main-color);
+  font-size: 12px;
+}
+.blogSingle .ReviewS .card .text .stars i {
+  margin-right: 2px;
+}
+.blogSingle .contact {
+  padding: 33px 35px 35px;
+}
+.blogSingle .contact h1 {
+  color: var(--text-color);
+  font-size: 17px;
+  margin-bottom: 29px;
+}
+.blogSingle .contact {
+  width: 100%;
+}
+.blogSingle .contact .textarea {
+  margin-bottom: 28px;
+}
+
+/*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss blog-sidebar*/
+
+.blog-sidebar {
+  margin: 100px 0;
+}
+.blog-sidebar .container {
+  gap: 30px;
+  display: flex;
+}
+.blog-sidebar .blogSingle .bigBigHolder {
+  padding: 30px;
+  background: var(--input-color);
+}
+.blog-sidebar .blogSingle {
+  max-width: 68%;
+}
+.blog-sidebar .blogSingle img {
+  max-width: 100%;
+}
+.blog-sidebar .blogSingle .ReviewS {
+  padding: 90px 16px 70px;
+}
+.blog-sidebar .blog-holder form input {
+  color: var(--text-color);
+  background: var(--body-color);
+  height: 58px;
+}
+.blog-sidebar .blog-holder form input:focus {
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+
+.blog-sidebar .blog-holder form button {
+  right: 8px;
 }
 
 /*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss checkOut*/
@@ -1370,6 +1603,8 @@ body.dark .brands img {
   outline: none;
   border-right: none;
   background: var(--input-color);
+  height: 52px;
+  max-width: 85%;
 }
 .checkOut .Code .Coupon .holder .ptn {
   display: flex;
@@ -1525,12 +1760,14 @@ body.dark .cart-page .cart-products .card {
   display: flex;
   justify-content: space-between;
 }
+.cart-code .Code .Coupon {
+  width: 35%;
+}
 .Code .Coupon {
   padding: 30px;
   background: var(--input-color);
   border: 1px solid var(--searchBord-3);
   height: fit-content;
-  width: 36%;
 }
 .Code .Coupon .holder {
   display: flex;
@@ -1559,7 +1796,7 @@ body.dark .cart-page .cart-products .card {
   width: 350px;
 }
 body.dark .Code .Coupon .holder input {
-  border: 1px solid #525252;
+  border: none;
 }
 .Code .Coupon .holder .ptn {
   display: flex;
@@ -1710,6 +1947,19 @@ header.sticky .dropdown-menu {
 
 
 
+@media (max-width: 1400px) {
+  .cart-page .cart-products h3 {
+    margin-right: 24px;
+  }
+}
+
+
+@media (max-width: 1400px) {
+.cart-page .cart-products h3 {
+    margin-right: 14px;
+  } 
+}
+
 
 @media (min-width: 992px) {
   .landing .right .holder-2 {
@@ -1719,6 +1969,7 @@ header.sticky .dropdown-menu {
     width: 30%;
   }
 }
+
 
 @media (max-width: 992px) {
   .landing .container {
@@ -1866,6 +2117,18 @@ header.sticky .dropdown-menu {
   .Code .Coupon .holder input {
     width: 180px;
   }
+  .cart-page .icons {
+    margin-right: 33px;
+  }
+  .blogSingle .ReviewS {
+    padding: 90px 35px 50px;
+  }
+  .blog-sidebar .contact .input {
+    flex-direction: column;
+  }
+  .blog-sidebar .contact .input div {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1997,6 +2260,60 @@ header.sticky .dropdown-menu {
   .cart-page .cart-products .card .info {
     position: relative;
     right: 50px;
+  }
+  .blogSingle .container {
+    padding: 47px 30px;
+    border-radius: 0;
+  }
+  .blogSingle .holder img {
+    max-width: 100%;
+  }
+  .blogSingle .holder .firstUl {
+    flex-wrap: wrap;
+  }
+  .blogSingle p,
+  .blogSingle h3 {
+    text-align: center;
+  }
+  .blogSingle .holder .icoDiv h3 {
+    line-height: 1.7;
+  }
+  .blogSingle .holder .smallHolder {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .blogSingle .ReviewS {
+    padding: 53px 0px;
+  }
+  .blogSingle .ReviewS .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blogSingle .ReviewS .card img {
+    align-self: center;
+  }
+  .blogSingle .ReviewS .card .text .stars {
+    display: flex;
+    align-self: center;
+  }
+  .blogSingle .ReviewS .card .replay {
+    top: 23px;
+  }
+  .contact .input {
+    flex-direction: column;
+  }
+  .contact .input div {
+    width: 100%;
+  }
+  .blog-sidebar .container {
+    flex-direction: column-reverse;
+  }
+  .blog-sidebar .blogSingle {
+    max-width: none;
+  }
+  .blog-sidebar {
+    margin: 0;
   }
 }
 

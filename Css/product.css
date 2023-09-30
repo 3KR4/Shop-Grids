@@ -115,6 +115,7 @@
   height: 46px;
   background: var(--input-color);
   color: var(--text-color);
+  gap: 5px;
 }
 .top-area .produt-info .buttons button.add,
 .top-area .produt-info .buttons button:hover {
