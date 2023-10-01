@@ -886,43 +886,55 @@ body.dark .brands img {
 
 /*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss faq */
 
-.accordion  {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 15px;
-}
-.accordion-button {
-  background: var(--input-color);
+.faq .collapssss {
+  padding: 20px;
   color: var(--text-color);
+  margin-bottom: 20px;
+  background: var(--input-color);
+  border: 1px solid var(--searchBord-3);
+  width: 100%;
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid #d9d9d9
 }
-.accordion-button:focus {
-  border: none;
+body.dark .faq .collapssss {
+  border-bottom: 1px solid #4c4c4c
 }
-.accordion-item {
-  border: none;
-}
-.faq .accordion-item button[aria-expanded="true"] {
-  background: var(--main-color);
-  border: none;
-  outline: none;
+.faq .collapssss.active {
+  background-color: var(--main-color);
   color: white;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
 }
-.accordion-button::after {
-  content: "";
+.faq .collapssss i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3%;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+.faq .collapssss i.active {
+  transform: rotate(180deg);
+  top: 26px;
 }
 
-.accordion-collapse {
+.faq .contacts {
+  padding: 20px 29px;
+  border-radius: 7px;
+  border: 1px solid var(--searchBord-3);
   background: var(--input-color);
-  color: var(--text-color);
+  margin-top: -30px;
+  display: none;
+  margin-bottom: 30px;
 }
-.faq .main-title h3 {
-  position: relative;
-  color: var(--text-color);
-  font-weight: 600;
-  font-size: 30px;
-  max-width: 379px;
-  text-align: center;
+.faq .contacts.active {
+  display: flex;
+  flex-direction: column;
+}
+.faq .contacts p {
+  color: var(--paragraph);
+  margin-bottom: 13px;
 }
 
 /*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss Blogs*/
@@ -1360,12 +1372,23 @@ body.dark .brands img {
   text-align: left;
   position: relative;
 }
+.checkOut .collapssss.active {
+  background-color: var(--main-color);
+  color: white;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
 .checkOut .collapssss i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 3%;
   color: var(--text-color);
+  transition: 0.3s;
+}
+.checkOut .collapssss i.active {
+  transform: rotate(180deg);
+  top: 22px;
 }
 .checkOut .form {
   padding-bottom: 120px;
@@ -1399,23 +1422,12 @@ body.dark .brands img {
   border: 1px solid var(--searchBord-3);
   background: var(--body-color);
   margin-top: -30px;
-  display: flex;
+  display: none;
   margin-bottom: 30px;
 }
 .checkOut .form .contacts.active {
-  display: none;
-}
-.checkOut .form .contacts2 {
-  display: none;
-}
-.checkOut .form .contacts2.active {
   display: flex;
-}
-.checkOut .form .contacts3 {
-  display: none;
-}
-.checkOut .form .contacts3.active {
-  display: flex;
+  flex-direction: column;
 }
 .checkOut .form .contacts3 .cardImgHolder {
   position: relative;
@@ -1445,6 +1457,10 @@ body.dark .brands img {
   color: var(--text-color);
   font-size: 14px;
   margin: 0;
+}
+.checkOut .form .contacts .btndiv {
+  display: flex;
+  gap: 10px;
 }
 .checkOut .form .contacts .input {
   display: flex;
@@ -1524,17 +1540,8 @@ body.dark .brands img {
 .checkOut .form .contacts .textarea textarea:focus {
   border: 1px solid var(--main-color);
 }
-.checkOut .form .contacts a {
-  color: white;
-  background-color: var(--main-color);
-  border-radius: 6px;
-  padding: 14px 25px;
-  font-weight: 400;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 18px;
-  text-align: center;
+.checkOut .form .contacts .main-buttom {
+  margin-top: 0;
 }
 .checkOut .form .input .SelectDelivery {
   font-size: 14px;

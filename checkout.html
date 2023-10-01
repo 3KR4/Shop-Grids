@@ -34,8 +34,8 @@
         </div>
           <div class="Details">
             <div class="form">
-              <button class="collapssss">Your Personal Details<i class="fa-solid fa-chevron-up"></i></button>
-                <div class="contacts">
+              <button onclick="collapsClick(checkOut[0], collapsIco[0], collapsBtn[0])" class="collapssss active">Your Personal Details<i class="fa-solid fa-chevron-down active"></i></button>
+                <div class="contacts contacts1 active">
                   <div class="input">
                     <div class="select">
                       <label class="Country-label" for="Country">Country</label>
@@ -87,8 +87,9 @@
                       </div>
                     </div>
                   </div>
+                  <button onclick="collapsClick(checkOut[1], collapsIco[1])" class="main-buttom">Next Step</button>
                 </div>
-              <button class="collapssss">Shipping Address<i class="fa-solid fa-chevron-down"></i></button>
+              <button onclick="collapsClick(checkOut[1], collapsIco[1], collapsBtn[1])" class="collapssss">Shipping Address<i class="fa-solid fa-chevron-down"></i></button>
                 <div class="contacts contacts2">
                   <div class="input">
                     <div class="select">
@@ -145,8 +146,12 @@
                       </button>
                     </div>
                   </div>
+                  <div class="btndiv">
+                    <button onclick="collapsClick(checkOut[0], collapsIco[0])" class="main-buttom">Previous</button>
+                    <button onclick="collapsClick(checkOut[2], collapsIco[2])" class="main-buttom">Save & Continue</button>
+                  </div>
                 </div>
-              <button class="collapssss">Payment Info<i class="fa-solid fa-chevron-down"></i></button>
+              <button onclick="collapsClick(checkOut[2], collapsIco[2], collapsBtn[2])" class="collapssss">Payment Info<i class="fa-solid fa-chevron-down"></i></button>
                 <div class="contacts contacts3">
                   <div class="input">
                     <div class="second">
@@ -238,46 +243,22 @@
   <script>
     let collapsBtn = document.querySelectorAll(".checkOut .collapssss")
     let collapsIco = document.querySelectorAll(".checkOut .collapssss i")
-    let checkOut1 = document.querySelector(".checkOut .form .contacts")
-    let checkOut2 = document.querySelector(".checkOut .form .contacts2")
-    let checkOut3 = document.querySelector(".checkOut .form .contacts3")
+    let checkOut = document.querySelectorAll(".checkOut .form .contacts")
 
-    collapsBtn[0].addEventListener("click", () => {
-      checkOut1.classList.toggle("active")
-      checkOut2.classList.remove("active")
-      checkOut3.classList.remove("active")
-      if (checkOut1.classList.contains("active")) {
-        collapsIco[0].classList.replace("fa-chevron-up", "fa-chevron-down")
-        collapsIco[1].classList.replace("fa-chevron-up", "fa-chevron-down")
-        collapsIco[2].classList.replace("fa-chevron-up", "fa-chevron-down")
-      } else {
-        collapsIco[0].classList.replace("fa-chevron-down", "fa-chevron-up")
-      }
+  function collapsClick(checkOutview, iconRotate, collapsBtns) {
+    checkOut.forEach((contact) => {
+      contact.classList.remove("active")
+      checkOutview.classList.add("active")
     })
-    collapsBtn[1].addEventListener("click", () => {
-      checkOut2.classList.toggle("active")
-      checkOut1.classList.add("active")
-      checkOut3.classList.remove("active")
-      if (checkOut2.classList.contains("active")) {
-        collapsIco[1].classList.replace("fa-chevron-down", "fa-chevron-up")
-        collapsIco[0].classList.replace("fa-chevron-up", "fa-chevron-down")
-        collapsIco[2].classList.replace("fa-chevron-up", "fa-chevron-down")
-      } else {
-        collapsIco[1].classList.replace("fa-chevron-up", "fa-chevron-down")
-      }
+    collapsBtn.forEach((btn) => {
+      btn.classList.remove("active")
+      collapsBtns.classList.add("active")
     })
-    collapsBtn[2].addEventListener("click", () => {
-      checkOut3.classList.toggle("active")
-      checkOut1.classList.add("active")
-      checkOut2.classList.remove("active")
-      if (checkOut3.classList.contains("active")) {
-        collapsIco[2].classList.replace("fa-chevron-down", "fa-chevron-up")
-        collapsIco[0].classList.replace("fa-chevron-up", "fa-chevron-down")
-        collapsIco[1].classList.replace("fa-chevron-up", "fa-chevron-down")
-      } else {
-        collapsIco[2].classList.replace("fa-chevron-up", "fa-chevron-down")
-      }
+    collapsIco.forEach((ico) => {
+      ico.classList.remove("active")
+      iconRotate.classList.add("active")
     })
+  }
   </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/Header-Footer.js"></script>
