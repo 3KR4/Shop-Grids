@@ -393,6 +393,7 @@ input[type="range"]::-moz-range-thumb{
 .main-card h4 {
   padding: 0px 28px 28px;
   margin-top: 5px;
+  min-width: 124px;
 }
 .shop .num a {
   border-radius: 50px;

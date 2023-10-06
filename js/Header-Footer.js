@@ -1,6 +1,7 @@
 // //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss Header
 let header = document.querySelector(".header");
 mainHeader = () => {
+  // let search = basket.find((x) => x.id === id) || []
   return (header.innerHTML = `
   <button class="scrollBar"><i class="fa-solid fa-angles-up"></i></button>
   <div class="nav-1">
@@ -87,41 +88,27 @@ mainHeader = () => {
         </span>
       </i>
       <i class="fa-solid fa-cart-shopping cart">
-        <span>
+        <span class="cartNumpers">
           0
         </span>
         <div class="main-cart">
+        <div>
           <div class="item">
-            <h6>2 Items</h6>
+            <h6><span class="length">0</span> Items</h6>
             <a href="cart.html">View Cart</a>
           </div>
           <div class="cards">
-            <div class="card">
-              <img src="img/item1.png" alt="">
-              <div class="info">
-                <h6>Apple Watch</h6>
-                <h6>Series 6</h6>
-                <p>1x - $35.00</p>
-              </div>
-              <i class="bi bi-x-lg"></i>
-            </div>
-            <div class="card">
-              <img src="img/item2.png" alt="">
-              <div class="info">
-                <h6>Wi-Fi Smart</h6>
-                <h6>Camera</h6>
-                <p>1x - $35.00</p>
-              </div>
-              <i class="bi bi-x-lg"></i>
-            </div>
+
           </div>
           <div class="total">
-            <h6>Total</h6>
-            <h6>$134.00</h6>
+            <h6>Total Price</h6>
+            <h6 class="cartProductTotal">0</h6>
           </div>
           <a class="Check main-buttom" href="checkout.html">Check Out</a>
         </div>
+        </div>
       </i>
+      
     </div>
 
   </div>
@@ -239,8 +226,8 @@ mainHeader = () => {
   </span>
 </i>
 <i class="fa-solid fa-cart-shopping cart">
-  <span>
-    2
+  <span class="cartNumpers">
+    0
   </span>
   <div class="main-cart">
     <div class="item">
@@ -318,8 +305,6 @@ function nagi (modeToggle) {
 nagi(modeToggle1)
 nagi(modeToggle2)
 
-
-
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
 let bar2 = document.querySelector(".bar2") 
@@ -351,7 +336,6 @@ function nagi2 (themesBtn) {
 nagi2(themeBtn1)
 nagi2(themeBtn2)
 nagi2(themeBtn3)
-
 
 let startSteaky = document.querySelector(".nav-3")
 window.addEventListener("scroll", function () {
@@ -401,7 +385,6 @@ scrollBar.onclick = function () {
       document.querySelector(':root').style.setProperty('--hover-color', "#0167f3");
     }
   }
-
   themeButtons.forEach((btn) =>{
     btn.addEventListener('click', (e) => {
     
@@ -423,64 +406,105 @@ scrollBar.onclick = function () {
     });
   });
 
-//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss cart
+  //! ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss cart
 
-let quantity = []
+let basket = JSON.parse(localStorage.getItem("addItem")) || []               // للأعلان الاساسي عن شنطة المنتجات المضافة من كل صفحة
+quantityBasket = JSON.parse(localStorage.getItem("Quantity")) || []         // للأعلان الثانوي عن شنطة الكمية المضافة من كل منتج
+let mainCart = document.querySelector(".cart .main-cart")                  // الهيكل المتحرك للسلة في الهيدر
+let carticon = document.querySelectorAll(".cartNumpers")                  // رقم المنتجات المضافة للسلة المتحركة
+let cartProductLength = document.querySelector(".main-cart .length")     // الرقم الكلي لعدد المنتجات المضافة للسلة المتحركة
+let cartProductTotal = document.querySelector(".cartProductTotal")      // السعر الكلي للمنتجات المضافة للسلة المتحركة
+let mainCartCards = document.querySelector(".cart .main-cart .cards")  // قائمة المنتجات التي سيوضع بها المنتجات في الجسم المتحرك للسلة
+let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول شنطة في الهيكل المتحرك التي سيوضع فيها اما المنتجات المضافة او رسالة السلة فارغة
 
-let increment = (id) => {
-  let search = quantity.find((x) => x.id === id)
+
+  let generateCartHover = () => {   //! لعرض المنتجات المضافة في السلة المتحركة     
+    if (basket.length !== 0) {     // لعرض جميع المنتجات الذي تم اضافتها للعربة المتحركة  
+      mainCartDiv.style.cssText = "display: block;"
+      return (mainCartCards.innerHTML = basket.map((x) => {
+        let {id, item} = x
+          let search = allProducts.find((y) => y.id === id) || []
+          return `
+          <div class="card">
+          <img src="${search.img}" alt="">
+          <div class="info">
+            <h6>${search.name}</h6>
+            <h5 class="type">${search.type}</h5>
+            <p>${search.price},00</p>
+          </div>
+          <i onclick="removeHoverItem(${id})" class="bi bi-x-lg"></i>
+        </div>
+          `
+        }).join("")
+      )
+    } else {   // لأظهار رسالة ان العربة المتحركة فارغة عندما لا يكون هناك منتجات مضافة  
+      mainCartDiv.style.cssText = "display: none;"
+      mainCart.innerHTML = `
+        <h1 style="  font-size: 15px;
+        text-align: center;
+        color: var(--text-color);"
+        class="cartIsEmpety">Your shopping cart is empty!</h1>
+    `
+    }
+  }
+  generateCartHover()  // لعرض المنتجات المضافة في السلة المتحركة في الصفحة تلقائي
+
+  let cartLength = () => {   //! لتحديث عدد العناصر الموجودة في السلة المتحركى 
+    cartProductLength.textContent = basket.length
+  }
+  cartLength()  // لتحديث عدد العناصر الموجودة في السلة المتحركى فقط عند عمل تحديث للصفحة
+
+  let totalPriceHover = () => {         //!  لتحديث خانة السعر النهائي في السلة المتحركة
+    let amout = basket.map((x) => {
+      let {id, item} = x
+      let search = allProducts.find((y) => y.id === id)
+      let searchQuantity = quantityBasket.find((x) => x.id === id)
+  
+      return searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item
+    }).reduce((x, y) => x + y,0)
+    cartProductTotal.textContent = `$ ${amout},00`
+  }
+  totalPriceHover()     // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
+
+  let increment = (id) => {  //! لاضافة منتج جديد في السلة عند الضغط عليه 
+  let search = basket.find((x) => x.id === id) 
   if (search === undefined) {
-    quantity.push({
+    basket.push({
       id: id,
       item: 1,
-    })
+      quantity: 1,
+    }) 
   } else {
-    search.item += 1
+    search.quantity += 1;
   }
-  update (id)
-}
-
-let decrement = (id) => {
-  let search = quantity.find((x) => x.id === id)
-  if (search.item === 0) return
-  else {
-    search.item -= 1
+  localStorage.setItem("addItem", JSON.stringify(basket))
+  update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
+  generateCartHover()  // لعرض المنتجات المضافة في العربة المتحركة في الصفحة تلقائي
   }
-  update (id)
-}
 
-let update = (id) => {
-  let search = quantity.find((x) => x.id === id)
-  document.getElementById(id).innerHTML = search.item
-}
+  let update = (id) => {  //! لاضافة منتج جديد في السلة عند الضغط عليه 
+    let search = basket.find((x) => x.id === id) 
+    calculation(carticon[0])
+    calculation(carticon[1])
+    cartLength()        // لتحديث عدد العناصر الموجودة في العربة المتحركى تلقأئيا
+    totalPriceHover()  // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
+  }
 
-// let basket = []
+  let calculation = (carticons) => { //! لزيادة رقم السلة عند اضافة منتج جديد
+    carticons.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0)
+  }
+  calculation(carticon[0])
+  calculation(carticon[1])
 
-// let incrementcart = (id) => {
-//   let search = basket.find((x) => x.id === id)
-//   if (search === undefined) {
-//     basket.push({
-//       id: id,
-//       item: 1,
-//     })
-//   } else {
-//     search.item += 1
-//   }
-//   updateCart(id)
-// }
-
-// let updateCart = (id) => {
-//   let search = basket.find((x) => x.id === id)
-//   document.getElementById(id).innerHTML = search.item
-//   calculation()
-// }
+  let removeHoverItem = (id) => {  //! لحذف العنصر عند الضغط علي سلة المهملات في السلة المتحركة
+    basket = basket.filter((x) => x.id !== id)
+    localStorage.setItem("addItem", JSON.stringify(basket))
+    update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
+    generateCartHover()  // لحذف المنتجات المحذوفة من العربة المتحركة تلقائي
+  }
 
 
-// let calculation = () => {
-//   let cartIcon = document.querySelector(".nav-2 .products-holder .cart span")
-//   console.log(cartIcon);
-//   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x,y) => x + y, 0)
-// }
+
 
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
 

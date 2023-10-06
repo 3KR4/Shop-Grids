@@ -46,9 +46,9 @@ function renderImages() {
       <div class="quantity">
         <h6>Quantity</h6>
           <div class="icons">
-            <i onclick="decrement(${id})" class="fa-solid fa-minus decrement"></i>
-            <span id="${id}" class="quantityNum">0</span>
-            <i onclick="increment(${id})" class="fa-solid fa-plus increment"></i>
+            <i class="fa-solid fa-minus decrement"></i>
+            <span class="quantityNum">0</span>
+            <i class="fa-solid fa-plus increment"></i>
           </div>
       </div>
 

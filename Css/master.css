@@ -1655,7 +1655,7 @@ body.dark .faq .collapssss {
 /*!ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss cart*/
 
 .cart-page {
-  margin: 100px 0;
+  margin: 100px 0 0;
 }
 .cart-page .container {
   background: var(--input-color);
@@ -1694,6 +1694,7 @@ body.dark .cart-page .cart-products .card {
   display: flex;
   align-items: center;
   padding-left: 40px;
+  gap: 10px;
 }
 .cart-page .cart-products .card .info img {
   width: 120px;
@@ -1718,6 +1719,7 @@ body.dark .cart-page .cart-products .card {
 .cart-page .cart-products i {
   color: var(--main-color);
   font-size: 30px;
+  cursor: pointer;
 }
 .cart-page .icons { 
   display: flex;
@@ -1766,6 +1768,7 @@ body.dark .cart-page .cart-products .card {
 .Code .container {
   display: flex;
   justify-content: space-between;
+  padding: 100px 0 0;
 }
 .cart-code .Code .Coupon {
   width: 35%;
@@ -1803,10 +1806,13 @@ body.dark .cart-page .cart-products .card {
   width: 350px;
 }
 body.dark .Code .Coupon .holder input {
-  border: none;
+  border: 1px solid #525252;
 }
 .Code .Coupon .holder .ptn {
   display: flex;
+}
+.Coupon .product div:first-child {
+  border-top: 1px solid var(--paragraph);
 }
 .Coupon .product div {
   display: flex;
@@ -1814,13 +1820,25 @@ body.dark .Code .Coupon .holder input {
   border-bottom: 1px solid var(--paragraph);
   padding: 10px 0;
 }
+.Coupon .productsNameHolder {
+  display: flex;
+  flex-direction: column;
+}
 .Coupon .product div:last-child {
   border-bottom: none;
-  margin: 12px 0px -8px;
+  margin-bottom: -8px;
 }
 .Coupon .product h6 {
   font-size: 15px;
   color: var(--text-color);
+  margin-bottom: 10px;
+}
+.Coupon .product h5 {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  padding: 20px 0 0;
 }
 .Coupon .product div span {
   color: var(--paragraph);
@@ -2119,7 +2137,7 @@ header.sticky .dropdown-menu {
     width: 80px;
   }
   .Code .Coupon {
-    width: 48%;
+    width: 48% !important;
   }
   .Code .Coupon .holder input {
     width: 180px;
@@ -2237,9 +2255,10 @@ header.sticky .dropdown-menu {
   .Code .container {
     flex-direction: column;
     gap: 30px;
+    padding: 100px 18px;
   }
   .Code .Coupon {
-    width: 100%;
+    width: 100% !important;
     flex-direction: column;
     gap: 30px;
   }
