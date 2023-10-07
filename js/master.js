@@ -365,7 +365,7 @@ rednderoffer();
 
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss counter
 
-let countDownDate = new Date("Oct 31, 2023 23:59:59").getTime();
+let countDownDate = new Date("Oct 30, 2023 23:59:59").getTime();
 let counter = setInterval(() => {
   let dateNow = new Date().getTime();
   let dateDiff = countDownDate - dateNow;

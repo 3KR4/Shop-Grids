@@ -15,7 +15,7 @@ function rednderShop() {
         <div class="holder">
           <strong>${value}</strong>
           <p>${type}</p>
-          <a href="product.html"><h3>${name}</h3></a>
+          <a onclick="pushProduct(${id})" href="product.html"><h3>${name}</h3></a>
           <div class="review">
             <div class="stars">
               <i class="${star1}"></i>
@@ -92,8 +92,16 @@ gridIcons[1].addEventListener("click", () => {
 })
 
 
+let categoriesHolder = document.querySelector(".categoriesHolder")
+footer = document.querySelector(".footer");
+window.addEventListener("scroll", function () {
+  categoriesHolder.classList.toggle("active", window.scrollY > 300);
+},);
+window.addEventListener("scroll", function () {
+  categoriesHolder.classList.toggle("delete", window.scrollY > footer.offsetTop - 1200);
+});
 
-
+console.log(footer.offsetTop);
 
 let indicator = document.querySelectorAll(".indicator li")
 let indicatorIco = document.querySelectorAll(".indicator i")
@@ -111,7 +119,11 @@ for (let i = 0; i< indicator.length; i++) {
       
     }
     this.classList.add("active")
-
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
     const displayItems = this.getAttribute('data-filter');
 
     for (let z = 0; z < gridcards.length; z++) {

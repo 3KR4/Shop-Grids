@@ -168,7 +168,7 @@
         </div>
         <span>$1599.00 <p>$2000.00</p></span>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry incididunt ut eiusmod tempor labores.</p>
-        <h2>The offer will expire on September <br> 30th</h2>
+        <h2>The offer will expire on OCtoper <br> 30th</h2>
         <div class="timer">
           <div class="days">
             <span></span>
@@ -431,8 +431,11 @@
   <script src="js/Products.js"></script>
   <script src="js/Header-Footer.js"></script>
   <script src="js/master.js"></script>
-  <style>
-
-  </style>
+  <script>
+    let startSteaky = document.querySelector(".nav-3")
+  window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", window.scrollY > startSteaky.offsetTop);
+});
+  </script>
 </body>
 </html>

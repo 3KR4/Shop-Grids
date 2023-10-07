@@ -337,10 +337,7 @@ nagi2(themeBtn1)
 nagi2(themeBtn2)
 nagi2(themeBtn3)
 
-let startSteaky = document.querySelector(".nav-3")
-window.addEventListener("scroll", function () {
-  header.classList.toggle("sticky", window.scrollY > startSteaky.offsetTop);
-});
+
 
 function pageNameChanger1 () {
   let pageName = document.querySelector(".pageName1")
@@ -416,6 +413,10 @@ let cartProductLength = document.querySelector(".main-cart .length")     // ال
 let cartProductTotal = document.querySelector(".cartProductTotal")      // السعر الكلي للمنتجات المضافة للسلة المتحركة
 let mainCartCards = document.querySelector(".cart .main-cart .cards")  // قائمة المنتجات التي سيوضع بها المنتجات في الجسم المتحرك للسلة
 let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول شنطة في الهيكل المتحرك التي سيوضع فيها اما المنتجات المضافة او رسالة السلة فارغة
+const audioAdd = new Audio();
+audioAdd.src = "../img/click.mp3";
+const audioDelete = new Audio();
+audioDelete.src = "../img/delete.mp3";
 
 
   let generateCartHover = () => {   //! لعرض المنتجات المضافة في السلة المتحركة     
@@ -474,6 +475,7 @@ let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول 
       item: 1,
       quantity: 1,
     }) 
+    audioAdd.play()
   } else {
     search.quantity += 1;
   }
@@ -501,9 +503,13 @@ let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول 
     localStorage.setItem("addItem", JSON.stringify(basket))
     update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
     generateCartHover()  // لحذف المنتجات المحذوفة من العربة المتحركة تلقائي
+    audioDelete.play()
   }
 
-
+  let productBasket = JSON.parse(localStorage.getItem("Product")) || []   
+  let pushProduct = (id) => {  //! لحفظ بيانات المنتج بالضغط عليه للدخول علي صفحة المنتج  
+    localStorage.setItem("Product", id)
+  }
 
 
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
