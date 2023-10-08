@@ -116,6 +116,7 @@
   background: var(--input-color);
   color: var(--text-color);
   gap: 5px;
+  box-shadow: 0px 0px 20px #00000012;
 }
 .top-area .produt-info .buttons button.add,
 .top-area .produt-info .buttons button:hover {

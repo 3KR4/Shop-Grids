@@ -73,44 +73,13 @@ mainHeader = () => {
         </div>
       </div>
     </div>
-
-    <div class="products-holder">
-      <div class="darkLight darkLight1">
-        <i class="bi bi-brightness-high-fill sun"></i>
-        <i class="bi bi-moon-fill moon"></i>
-      </div>
-      
-      <i class=" fa-solid fa-circle-half-stroke theme theme1"></i>
-
-      <i class="fa-solid fa-heart love">
-        <span>
-          0
-        </span>
-      </i>
-      <i class="fa-solid fa-cart-shopping cart">
-        <span class="cartNumpers">
-          0
-        </span>
-        <div class="main-cart">
-        <div>
-          <div class="item">
-            <h6><span class="length">0</span> Items</h6>
-            <a href="cart.html">View Cart</a>
-          </div>
-          <div class="cards">
-
-          </div>
-          <div class="total">
-            <h6>Total Price</h6>
-            <h6 class="cartProductTotal">0</h6>
-          </div>
-          <a class="Check main-buttom" href="checkout.html">Check Out</a>
-        </div>
-        </div>
-      </i>
-      
+    <div class="follow">
+      <h3>Follow Us:</h3> 
+      <a href=""><i class="bi bi-facebook"></i></a>
+      <a href=""><i class="bi bi-twitter"></i></a>
+      <a href=""><i class="bi bi-messenger"></i></a>
+      <a href=""><i class="bi bi-discord discord"></i></a>
     </div>
-
   </div>
   <div class="nav-3">
   <div class= "navHolder"> 
@@ -193,12 +162,41 @@ mainHeader = () => {
     <span class="bar2"></span>
     <span class="bar3"></span>
   </span>
-  <div class="follow">
-    <h3>Follow Us:</h3> 
-    <a href=""><i class="bi bi-facebook"></i></a>
-    <a href=""><i class="bi bi-twitter"></i></a>
-    <a href=""><i class="bi bi-messenger"></i></a>
-    <a href=""><i class="bi bi-discord discord"></i></a>
+  <div class="products-holder">
+    <div class="darkLight darkLight1">
+      <i class="bi bi-brightness-high-fill sun"></i>
+      <i class="bi bi-moon-fill moon"></i>
+    </div>
+    
+    <i class=" fa-solid fa-circle-half-stroke theme theme1"></i>
+
+    <i class="fa-solid fa-heart love">
+      <span>
+        0
+      </span>
+    </i>
+    <i class="fa-solid fa-cart-shopping cart">
+      <span class="cartNumpers">
+        0
+      </span>
+      <div class="main-cart">
+      <div>
+        <div class="item">
+          <h6><span class="length">0</span> Items</h6>
+          <a href="cart.html">View Cart</a>
+        </div>
+        <div class="cards">
+
+        </div>
+        <div class="total">
+          <h6>Total Price</h6>
+          <h6 class="cartProductTotal">0</h6>
+        </div>
+        <a class="Check main-buttom" href="checkout.html">Check Out</a>
+      </div>
+      </div>
+    </i>
+    
   </div>
   <div class="theme-holder">
     <div class="holder">
@@ -212,56 +210,6 @@ mainHeader = () => {
     </div>
   </div>
 
-  <div class="products-holder">
-  <div class="darkLight darkLight2">
-    <i class="bi bi-brightness-high-fill sun"></i>
-    <i class="bi bi-moon-fill moon"></i>
-  </div>
-
-  <i class=" fa-solid fa-circle-half-stroke theme theme2"></i>
-
-<i class="fa-solid fa-heart love">
-  <span>
-    0
-  </span>
-</i>
-<i class="fa-solid fa-cart-shopping cart">
-  <span class="cartNumpers">
-    0
-  </span>
-  <div class="main-cart">
-    <div class="item">
-      <h6>2 Items</h6>
-      <a href="cart.html">View Cart</a>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <img src="img/item1.png" alt="">
-        <div class="info">
-          <h6>Apple Watch</h6>
-          <h6>Series 6</h6>
-          <p>1x - $35.00</p>
-        </div>
-        <i class="bi bi-x-lg"></i>
-      </div>
-      <div class="card">
-        <img src="img/item2.png" alt="">
-        <div class="info">
-          <h6>Wi-Fi Smart</h6>
-          <h6>Camera</h6>
-          <p>1x - $35.00</p>
-        </div>
-        <i class="bi bi-x-lg"></i>
-      </div>
-    </div>
-    <div class="total">
-      <h6>Total</h6>
-      <h6>$134.00</h6>
-    </div>
-    <a class="Check main-buttom" href="">Check Out</a>
-  </div>
-</i>
-</div>
 </div>
   </div>
   </div>
@@ -284,11 +232,10 @@ mainHeader = () => {
 mainHeader();
 
 let body = document.querySelector("body");
-modeToggle1 = document.querySelector(".darkLight1");
-modeToggle2 = document.querySelector(".darkLight2");
+modeToggle = document.querySelector(".darkLight");
 let getMode = localStorage.getItem("mode");
 
-function nagi (modeToggle) {
+function nagi () {
   if (getMode === "dark-mode") {
     body.classList.add("dark");
   }
@@ -302,8 +249,8 @@ function nagi (modeToggle) {
     }
   });
 }
-nagi(modeToggle1)
-nagi(modeToggle2)
+nagi()
+
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
@@ -318,7 +265,6 @@ function navLinkClick () {
 }
 
 let themeBtn1 = document.querySelector(".theme1")
-let themeBtn2 = document.querySelector(".theme2")
 let themeBtn3 = document.querySelector(".theme3btn")
 let themeico3 = document.querySelector(".theme3")
 let themeHolder = document.querySelector(".theme-holder")
@@ -334,7 +280,6 @@ function nagi2 (themesBtn) {
   })
 }
 nagi2(themeBtn1)
-nagi2(themeBtn2)
 nagi2(themeBtn3)
 
 
@@ -408,7 +353,7 @@ scrollBar.onclick = function () {
 let basket = JSON.parse(localStorage.getItem("addItem")) || []               // للأعلان الاساسي عن شنطة المنتجات المضافة من كل صفحة
 quantityBasket = JSON.parse(localStorage.getItem("Quantity")) || []         // للأعلان الثانوي عن شنطة الكمية المضافة من كل منتج
 let mainCart = document.querySelector(".cart .main-cart")                  // الهيكل المتحرك للسلة في الهيدر
-let carticon = document.querySelectorAll(".cartNumpers")                  // رقم المنتجات المضافة للسلة المتحركة
+let carticon = document.querySelector(".cartNumpers")                  // رقم المنتجات المضافة للسلة المتحركة
 let cartProductLength = document.querySelector(".main-cart .length")     // الرقم الكلي لعدد المنتجات المضافة للسلة المتحركة
 let cartProductTotal = document.querySelector(".cartProductTotal")      // السعر الكلي للمنتجات المضافة للسلة المتحركة
 let mainCartCards = document.querySelector(".cart .main-cart .cards")  // قائمة المنتجات التي سيوضع بها المنتجات في الجسم المتحرك للسلة
@@ -429,7 +374,7 @@ audioDelete.src = "../img/delete-1.mp3";
           <div class="card">
           <img src="${search.img}" alt="">
           <div class="info">
-            <h6>${search.name}</h6>
+          <a onclick="pushProduct(${id})" href="product.html"><h3>${search.name}</h3></a>
             <h5 class="type">${search.type}</h5>
             <p>$${search.price}</p>
           </div>
@@ -492,11 +437,10 @@ audioDelete.src = "../img/delete-1.mp3";
     totalPriceHover()  // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
   }
 
-  let calculation = (carticons) => { //! لزيادة رقم السلة عند اضافة منتج جديد
-    carticons.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0)
+  let calculation = () => { //! لزيادة رقم السلة عند اضافة منتج جديد
+    carticon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0)
   }
-  calculation(carticon[0])
-  calculation(carticon[1])
+  calculation()
 
   let removeHoverItem = (id) => {  //! لحذف العنصر عند الضغط علي سلة المهملات في السلة المتحركة
     basket = basket.filter((x) => x.id !== id)

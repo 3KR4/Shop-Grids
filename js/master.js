@@ -443,6 +443,24 @@ let offerItems = offer.map((x) => {
   };
 rednderoffer();
 
+let newOffer = 1022
+let search = allProducts.find((y) => y.id == newOffer)
+let newSection = document.querySelector(".offer .bigHolder .new");
+
+let renderNewProduct = () => {
+  newSection.innerHTML = `
+  <img src="${search.imgSingle}" alt="">
+  <div class="text">
+    <h3>${search.name}</h3>
+    <p>Find out the latest news about the upcoming Nvidia GeForce RTX 4000 series.</p>
+    <span>$${search.price}</span>
+    <a class="main-buttom" onclick="pushProduct(${newOffer})" href="product.html">But It Now</a>
+  </div>
+  <img class="nvidia" src="img/nvidia logo.png" alt="">
+    `
+  }
+  renderNewProduct();
+
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss counter
 
 let countDownDate = new Date("Oct 30, 2023 23:59:59").getTime();
