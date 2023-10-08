@@ -101,141 +101,187 @@ rednderCategories();
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss Product
 
 const Product = [
-{
-  img:"img/Products/product-1.png",
-  type: "Watches",
-  name:"Xiaomi Mi Band 5",
-  review:"40",
-  price:"$199.00",
-  price2:"",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-2.png",
-  type: "Speaker",
-  name:"Big Power Sound Speaker",
-  review:"50",
-  price:"$275.00 ",
-  price2:"$300.00",
-  info:"-25%",
-  infoClass:"red",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star-half-stroke",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-3.png",
-  type: "Camera",
-  name:"WiFi Security Camera",
-  review:"36",
-  price:"$399.00",
-  price2:"",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-4.png",
-  type: "Phones",
-  name:"iphone 6x plus",
-  review:"67",
-  price:"$400.00",
-  price2:"",
-  info:"new",
-  infoClass:"blue",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-6.png",
-  type: "Speaker",
-  name:"Mini Bluetooth Speaker",
-  review:"22",
-  price:"$70.00",
-  price2:"",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star-half-stroke",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-5.png",
-  type: "Headphones",
-  name:"Wireless Headphones",
-  review:"27",
-  price:"$350.00",
-  price2:"",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-7.png",
-  type: "Headphones",
-  name:"PX7 Wireless Headphones",
-  review:"86",
-  price:"$100.00 ",
-  price2:"$300.00",
-  info:"-50%",
-  infoClass:"red",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/Products/product-8.png",
-  type: "Laptop",
-  name:"Apple MacBook Air",
-  review:"14",
-  price:"$899.00",
-  price2:"",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:" fa-regular fa-star",
-}
+  { 
+    id: 1014, 
+    value: "Other",
+    type: "Drone",
+    name: "GoPro Karma Crone",
+    review: "08",
+    price: "850.00",
+    price2: "1000.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star-half-stroke",
+    img: "img/All Products/GoPro Karma Crone (0).png",
+    imgSingle: "img/All Products/Single/GoPro Karma Crone (1).png",
+    img1: "img/All Products/Single/GoPro Karma Crone (1).png",
+    img2: "img/All Products/Single/GoPro Karma Crone (2).png",
+    img3: "img/All Products/Single/GoPro Karma Crone (3).png",
+    img4: "img/All Products/Single/GoPro Karma Crone (4).png",
+    img5: "img/All Products/Single/GoPro Karma Crone (5).png",
+  },
+  { 
+    id: 1015, 
+    value: "Hardware",
+    type: "Mother Board",
+    name: "AMD X570S GAMING",
+    review: "07",
+    price: "160.00",
+    price2: "185.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/AMD X570S GAMING (0).png",
+    imgSingle: "img/All Products/Single/AMD X570S GAMING (1).png",
+    img1: "img/All Products/Single/AMD X570S GAMING (1).png",
+    img2: "img/All Products/Single/AMD X570S GAMING (2).png",
+    img3: "img/All Products/Single/AMD X570S GAMING (3).png",
+    img4: "img/All Products/Single/AMD X570S GAMING (4).png",
+    img5: "",
+  },
+  { 
+    id: 1017, 
+    value: "Other",
+    type: "Laptop",
+    name: "Acer Nitro 144Hz",
+    review: "33",
+    price: "500.00",
+    price2: "580.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star-half-stroke",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Acer Nitro 144Hz.png",
+    imgSingle: "img/All Products/Single/Acer Nitro 144Hz.png",
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+  },
+  { 
+    id: 1018, 
+    value: "Consoles",
+    type: "Console",
+    name: "Ps4 Pro",
+    review: "153",
+    price: "250.00",
+    price2: "290.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/Ps4 (0).png",
+    imgSingle: "img/All Products/Single/Ps4 (1).png",
+    img1: "img/All Products/Single/Ps4 (1).png",
+    img2: "img/All Products/Single/Ps4 (2).png",
+    img3: "img/All Products/Single/Ps4 (3).png",
+    img4: "img/All Products/Single/Ps4 (4).png",
+    img5: "",
+  },
+  { 
+    id: 1031, 
+    value: "Hardware",
+    type: "Storage",
+    name: "AORUS Gen4 2TB",
+    review: "22",
+    price: "105.00",
+    price2: "119.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-regular fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/HyperX QuadCast S (0).png",
+    imgSingle: "img/All Products/Single/HyperX QuadCast S (1).png",
+    img1: "img/All Products/Single/HyperX QuadCast S (1).png",
+    img2: "img/All Products/Single/HyperX QuadCast S (2).png",
+    img3: "img/All Products/Single/HyperX QuadCast S (3).png",
+    img4: "img/All Products/Single/HyperX QuadCast S (4).png",
+    img5: "img/All Products/Single/HyperX QuadCast S (5).png",
+  },
+  { 
+    id: 1027, 
+    value: "Consoles",
+    type: "Joysticks",
+    name: "ps4 controlar",
+    review: "96",
+    price: "25.00",
+    price2: "32.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/ps4 controlar (0).png",
+    imgSingle: "img/All Products/Single/ps4 controlar (1).png",
+    img1: "img/All Products/Single/ps4 controlar (1).png",
+    img2: "img/All Products/Single/ps4 controlar (2).png",
+    img3: "img/All Products/Single/ps4 controlar (3).png",
+    img4: "img/All Products/Single/ps4 controlar (4).png",
+    img5: "",
+  },
+  { 
+    id: 1022, 
+    value: "Hardware",
+    type: "Graphic Card",
+    name: "Aorus 4060ti",
+    review: "15",
+    price: "330.00",
+    price2: "350.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Aorus 4060ti.png",
+    imgSingle: "img/All Products/Single/Aorus 4060ti.png",
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+  },
+  { 
+    id: 1032, 
+    value: "Hardware",
+    type: "Memory",
+    name: "XPG Caster RGB 32GB",
+    review: "26",
+    price: "89.00",
+    price2: "105.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star-half-stroke",
+    img: "img/All Products/XPG Caster RGB 32GB  (0).png",
+    imgSingle: "img/All Products/Single/XPG Caster RGB 32GB  (1).png",
+    img1: "img/All Products/Single/XPG Caster RGB 32GB  (1).png",
+    img2: "img/All Products/Single/XPG Caster RGB 32GB  (2).png",
+    img3: "img/All Products/Single/XPG Caster RGB 32GB  (3).png",
+    img4: "img/All Products/Single/XPG Caster RGB 32GB  (4).png",
+    img5: "img/All Products/Single/XPG Caster RGB 32GB  (5).png",
+  },
 ];
 
 let productCards = document.querySelector(".Product .container")
-
 function rednderProduct() {
-let productItems = Product.map((item) => {
-
+let productItems = Product.map((x) => {
+  let {id, type, name, review, price, price2, star1, star2, star3, img, } = x;
   return`
     <div class="main-card">
       <div class="image">
-        <img src="${item.img}" alt="">
-        <button onclick="calculation()" class="main-buttom">
+        <img src="${img}" alt="">
+        <button onclick="increment(${id})" class="main-buttom">
           <i class="bi bi-cart2"></i>
           Add To Cart
         </button>
-        <span class="${item.infoClass}">${item.info}</span>
       </div>
       <div class="holder">
-        <p>${item.type}</p>
-        <h3>${item.name}</h3>
+        <p>${type}</p>
+        <a onclick="pushProduct(${id})" href="product.html"><h3>${name}</h3></a>
         <div class="review">
           <div class="stars">
-            <i class="${item.star1}"></i>
-            <i class="${item.star1}"></i>
-            <i class="${item.star1}"></i>
-            <i class="${item.star2}"></i>
-            <i class="${item.star3}"></i>
+            <i class="${star1}"></i>
+            <i class="${star1}"></i>
+            <i class="${star1}"></i>
+            <i class="${star2}"></i>
+            <i class="${star3}"></i>
           </div>
-          <p>${item.review} Review</p>
+          <p>${review} Review</p>
         </div>
-        <h4>${item.price} <p>${item.price2}</p></h4>
+        <h4>$${price} <p>$${price2}</p></h4>
       </div>
     </div>
   `
@@ -246,115 +292,149 @@ rednderProduct();
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss offer
 
 const offer = [
-{
-  img:"img/offer/offer_1.png",
-  type: "Mouse",
-  name:"XPG INFAREX M10",
-  review:"68",
-  price:"$18.00",
-  price2:"$20.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:"fa-solid fa-star",
-},
-{
-  img:"img/offer/offer_2.png",
-  type: "Headphones",
-  name:"Logitech G PRO X",
-  review:"50",
-  price:"$180.00 ",
-  price2:"$200.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/offer/offer_3.png",
-  type: "Memory",
-  name:"XPG D60G RGB 16GB",
-  review:"36",
-  price:"$60.00",
-  price2:"$85.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:"fa-solid fa-star",
-},
-{
-  img:"img/offer/offer_4.png",
-  type: "Mother Board",
-  name:"Asus Rog Strix Z790",
-  review:"12",
-  price:"$350.00",
-  price2:"$500.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/offer/offer_5.png",
-  type: "Procesor",
-  name:"Intel i9-12900KS",
-  review:"3",
-  price:"$799.00",
-  price2:"$840.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-regular fa-star",
-  star3:"fa-regular fa-star",
-},
-{
-  img:"img/offer/offer_6.png",
-  type: "Monitor",
-  name:"Msi G244F24 170HZ",
-  review:"23",
-  price:"$205.00",
-  price2:"$220.00",
-  info:"",
-  infoClass:"",
-  star1:"fa-solid fa-star",
-  star2:"fa-solid fa-star",
-  star3:"fa-regular fa-star",
-},
+  { 
+    id: 1001, 
+    value: "Accessories",
+    type: "Mouse",
+    name: "XPG INFAREX M10",
+    review: "68",
+    price: "18.00",
+    price2: "20.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/XPG INFAREX M10 (0).png",
+    imgSingle: "img/All Products/Single/XPG INFAREX M10 (1).png",
+    img1: "img/All Products/Single/XPG INFAREX M10 (1).png",
+    img2: "img/All Products/Single/XPG INFAREX M10 (2).png",
+    img3: "img/All Products/Single/XPG INFAREX M10 (3).png",
+    img4: "img/All Products/Single/XPG INFAREX M10 (4).png",
+    img5: "img/All Products/Single/XPG INFAREX M10 (5).png",
+  },
+  { 
+    id: 1002,
+    value: "Accessories",
+    type: "Headphones",
+    name: "Logitech G PRO X",
+    review: "50",
+    price: "180.00",
+    price2: "200.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Logitech G PRO X (0).png",
+    imgSingle: "img/All Products/Single/Logitech G PRO X (1).png",
+    img1: "img/All Products/Single/Logitech G PRO X (1).png",
+    img2: "img/All Products/Single/Logitech G PRO X (2).png",
+    img3: "img/All Products/Single/Logitech G PRO X (3).png",
+    img4: "img/All Products/Single/Logitech G PRO X (4).png",
+    img5: "",
+  },
+  {
+    id: 1003,
+    value: "Hardware",
+    type: "Memory",
+    name: "XPG D60G RGB 16GB",
+    review: "36",
+    price: "60.00",
+    price2: "75.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/XPG D60G RGB 16GB (0).png",
+    imgSingle: "img/All Products/Single/XPG D60G RGB 16GB (1).png",
+    img1: "img/All Products/Single/XPG D60G RGB 16GB (1).png",
+    img2: "img/All Products/Single/XPG D60G RGB 16GB (2).png",
+    img3: "img/All Products/Single/XPG D60G RGB 16GB (3).png",
+    img4: "img/All Products/Single/XPG D60G RGB 16GB (4).png",
+    img5: "img/All Products/Single/XPG D60G RGB 16GB (5).png",
+  },
+  { 
+    id: 1004,
+    value: "Hardware",
+    type: "Mother Board",
+    name: "Asus Rog Strix Z790",
+    review: "12",
+    price: "350.00",
+    price2: "390.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-regular fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Asus Rog Strix Z790 (0).png",
+    imgSingle: "img/All Products/Single/Asus Rog Strix Z790 (1).png",
+    img1: "img/All Products/Single/Asus Rog Strix Z790 (1).png",
+    img2: "img/All Products/Single/Asus Rog Strix Z790 (2).png",
+    img3: "img/All Products/Single/Asus Rog Strix Z790 (3).png",
+    img4: "img/All Products/Single/Asus Rog Strix Z790 (4).png",
+    img5: "img/All Products/Single/Asus Rog Strix Z790 (5).png",
+  },
+  { 
+    id: 1005,
+    value: "Hardware",
+    type: "Procesor",
+    name: "Intel i9-12900KS",
+    review: "3",
+    price: "799.00",
+    price2: "930.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-regular fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Intel i9-12900KS (0).png",
+    imgSingle: "img/All Products/Single/Intel i9-12900KS (1).png",
+    img1: "img/All Products/Single/Intel i9-12900KS (1).png",
+    img2: "img/All Products/Single/Intel i9-12900KS (2).png",
+    img3: "img/All Products/Single/Intel i9-12900KS (3).png",
+    img4: "",
+    img5: "",
+  },
+  { 
+    id: 1006,
+    value: "Other",
+    type: "Monitor",
+    name: "Msi G244F24 170HZ",
+    review: "23",
+    price: "205.00",
+    price2: "240.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-regular fa-star",
+    img: "img/All Products/Msi G244F24 170HZ (0).png",
+    imgSingle: "img/All Products/Single/Msi G244F24 170HZ (1).png",
+    img1: "img/All Products/Single/Msi G244F24 170HZ (1).png",
+    img2: "img/All Products/Single/Msi G244F24 170HZ (2).png",
+    img3: "img/All Products/Single/Msi G244F24 170HZ (3).png",
+    img4: "img/All Products/Single/Msi G244F24 170HZ (4).png",
+    img5: "img/All Products/Single/Msi G244F24 170HZ (5).png",
+  },
 ];
 
 let offerCards = document.querySelector(".offer .bigHolder .products")
-
 function rednderoffer() {
-let offerItems = offer.map((item) => {
-  
+let offerItems = offer.map((x) => {
+  let {id, type, name, review, price, price2, star1, star2, star3, img} = x;
   return`
     <div class="main-card">
       <div class="image">
-        <img src="${item.img}" alt="">
-        <button onclick="calculation()" class="main-buttom">
+        <img src="${img}" alt="">
+        <button onclick="increment(${id})" class="main-buttom">
           <i class="bi bi-cart2"></i>
           Add To Cart
         </button>
-        <span class="${item.infoClass}">${item.info}</span>
       </div>
       <div class="holder">
-        <p>${item.type}</p>
-        <h3>${item.name}</h3>
+        <p>${type}</p>
+        <a onclick="pushProduct(${id})" href="product.html"><h3>${name}</h3></a>
         <div class="review">
           <div class="stars">
-            <i class="${item.star1}"></i>
-            <i class="${item.star1}"></i>
-            <i class="${item.star1}"></i>
-            <i class="${item.star2}"></i>
-            <i class="${item.star3}"></i>
+            <i class="${star1}"></i>
+            <i class="${star1}"></i>
+            <i class="${star1}"></i>
+            <i class="${star2}"></i>
+            <i class="${star3}"></i>
           </div>
-          <p>${item.review} Review</p>
+          <p>${review} Review</p>
         </div>
-        <h4>${item.price} <p>${item.price2}</p></h4>
+        <h4>$${price} <p>$${price2}</p></h4>
       </div>
     </div>
   `

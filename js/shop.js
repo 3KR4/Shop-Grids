@@ -48,9 +48,11 @@ for(let i of li) {
   const x = Number(last.textContent.trim().substring(1));
   i.setAttribute('data-price', x);
   ar.push(i);
+
 }
 
 select.onchange = sortingValue;
+
 function sortingValue() {
   if(this.value == 'Default') {
     while(field.firstChild) {
@@ -65,12 +67,13 @@ function sortingValue() {
     sortElem(field, li, false)
   }
 }
+
 function sortElem(field, li, asc) {
   let dm, sortli;
   dm = asc ? 1 : -1;
   sortli = li.sort((a, b) => {
-    const ax = a.getAttribute('data-price')
-    const bx = b.getAttribute('data-price')
+    const ax = Number(a.getAttribute('data-price'))
+    const bx = Number(b.getAttribute('data-price'))
     return ax > bx ? (1*dm) : (-1*dm)
   })
   while(field.firstChild) {

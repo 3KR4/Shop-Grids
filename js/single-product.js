@@ -20,7 +20,7 @@ let renderImages = () => {
       <div class="produt-info">
       <h2 class="title">${search.name}</h2>
       <p><span><i class="fa-solid fa-tag"></i> Type: ${search.type} </span></p>
-      <h3 class="price"> <span>$${search.price},00</span> <del>$${search.price2},00</del></h3>
+      <h3 class="price"> <span>$${search.price}</span> <del>$${search.price2}</del></h3>
       <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <div class="buttons">
           <button class="main-buttom add">Add To Cart</button>

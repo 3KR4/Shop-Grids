@@ -66,6 +66,7 @@ let incrementQuantity = (id) => {       //! cart   لزيادة الكمية ع�
   } else {
     search.item += 1;
   }
+  audioAdd.play()
   generateCartItems()        //  للتحديث التلقائي للبيانات و السعر في منتجات العربة    
   localStorage.setItem("Quantity", JSON.stringify(quantityBasket))
   totalAmount()            //  للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات   
@@ -82,6 +83,7 @@ let decrementQuantity = (id) => {     //! cart   لتقليل الكمية عن�
   localStorage.setItem("Quantity", JSON.stringify(quantityBasket))
   totalAmount()         //  للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات           
   generateCartNames()  //  للتحديث التلقائي لخانة الاسامي في الشراء
+  audioDelete.play()
 }
 update = (id) => {  //! لاضافة منتج جديد في السلة عند الضغط عليه 
   generateCartItems()
@@ -96,6 +98,7 @@ let removeItem = (id) => {          //! cart   لحذف العنصر عند ال
   update(id)           // للتحديث التلقائي لعدد المنتجات في العربة عند حذف اي منتنج     
   generateCartItems()  // للتحديث التلقائي للمنتجات المعروضة في صفحة العربة
   removeHoverItem(id)
+  
 }
 let generateCartNames = () => {
   return (productsNameHolder.innerHTML = basket.map((x) => {
@@ -105,7 +108,7 @@ let generateCartNames = () => {
       
       return `
       <div id=${id}>
-        <span>${search.name} <h6></h6></span>
+        <span>${search.name} <h6>x${searchQuantity === undefined ? 1 : searchQuantity.item}</h6></span>
         <span>$ ${searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item},00</span>
       </div>
       `
