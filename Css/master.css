@@ -14,9 +14,7 @@ body {
   font-family: 'Outfit', sans-serif;
   font-family: 'Poppins', sans-serif;
 }
-.nav-4 {
-  display: none;
-}
+
 
 /*!sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss landing */
 
@@ -1843,6 +1841,12 @@ body.dark .Code .Coupon .holder input {
 .Coupon .product div span {
   color: var(--paragraph);
   font-size: 14px;
+  display: flex;
+  gap: 7px;
+}
+.Coupon .product div span h6 {
+  margin: 0;
+  color: var(--paragraph);
 }
 .Coupon .product div .final-span {
   color: var(--main-color);

@@ -31,10 +31,10 @@ let generateCartItems = () => {  //! لعرض المنتجات المضافة ف
             <i onclick="incrementQuantity(${id})" class="fa-solid fa-plus increment"></i>
           </div>
           <h3 class="price col-lg-2">
-            $ ${search.price},00
+            $${search.price}
           </h3>
           <h3 class="discount col-lg-2">
-            $ ${searchQuantity === undefined? search.price : search.price * searchQuantity.item},00
+            $${searchQuantity === undefined? search.price : search.price * searchQuantity.item}
           </h3>
           <i onclick="removeItem(${id})" class="bi bi-trash trash col-lg-1"></i>
       </div>
@@ -97,7 +97,6 @@ let removeItem = (id) => {          //! cart   لحذف العنصر عند ال
   generateCartItems()  // للتحديث التلقائي للمنتجات المعروضة في صفحة العربة
   removeHoverItem(id)
 }
-
 let generateCartNames = () => {
   return (productsNameHolder.innerHTML = basket.map((x) => {
     let {id, item} = x
@@ -106,12 +105,13 @@ let generateCartNames = () => {
       
       return `
       <div id=${id}>
-        <span>${search.name}</span>
+        <span>${search.name} <h6></h6></span>
         <span>$ ${searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item},00</span>
       </div>
       `
     }).join(""))}
 generateCartNames()  // للتحديث التلقائي لخانة اسامي المنتجات في عربة المشتريات عند تحديث الصفحة
+
 let totalAmount = () => {         //! cart   لتحديث خانة السعر النهائي 
   let amout = basket.map((x) => {
     let {id, item} = x

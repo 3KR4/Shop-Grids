@@ -4,7 +4,7 @@ function rednderShop() {
     .map((x) => {
       let {id, value, type, name, review, price, price2, star1, star2, star3, img, img1, img2, img3, img4, img5} = x;
       return `
-      <div id="product-id-${id}" data-category=""  data-price="" class="main-card">
+      <li id="product-id-${id}" data-category=""  data-price="" class="main-card">
         <div class="image">
           <img src="${img}" alt="">
           <button onclick="increment(${id})" class="main-buttom">
@@ -28,8 +28,8 @@ function rednderShop() {
           </div>
           <p class="ptext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt illo temporibus dolor. Labore ducimus, quia modi, impedit dolore voluptatem ad ipsum hic eos in officiis natus et enim. Distinctio?</p>
         </div>
-        <h4>${price},00</h4>
-      </div>
+        <h4>$${price}</h4>
+      </li>
     `;
     })
     .join("");
@@ -38,13 +38,46 @@ function rednderShop() {
 rednderShop();
 
 
+let field = document.querySelector(".shop .shop-all .cards")
+let li = Array.from(field.children)
+let select = document.getElementById("select")
+let ar = []
 
+for(let i of li) {
+  const last = i.lastElementChild;
+  const x = Number(last.textContent.trim().substring(1));
+  i.setAttribute('data-price', x);
+  ar.push(i);
+}
 
-
-
-
-
-
+select.onchange = sortingValue;
+function sortingValue() {
+  if(this.value == 'Default') {
+    while(field.firstChild) {
+      field.removeChild(field.firstChild)
+    }
+    field.append(...ar)
+  }
+  if(this.value === 'LowToHigh') {
+    sortElem(field, li, true)
+  }
+  if(this.value === 'HighToLow') {
+    sortElem(field, li, false)
+  }
+}
+function sortElem(field, li, asc) {
+  let dm, sortli;
+  dm = asc ? 1 : -1;
+  sortli = li.sort((a, b) => {
+    const ax = a.getAttribute('data-price')
+    const bx = b.getAttribute('data-price')
+    return ax > bx ? (1*dm) : (-1*dm)
+  })
+  while(field.firstChild) {
+    field.removeChild(field.firstChild)
+  }
+  field.append(...sortli)
+}
 
 
 
@@ -57,10 +90,8 @@ rednderShop();
 
 let gridImage = document.querySelectorAll(".shop .main-card .image");
 let gridcards = document.querySelectorAll(".shop .main-card")
-let select = document.querySelectorAll(".shop .shop-all select")
 let gridIcons = document.querySelectorAll(".shop-all .grids i");
 let ptnUl = document.querySelector(".ptn-ul");
-let ar = [];
 
 function ulActive() {
   ptnUl.classList.toggle("active");
@@ -93,15 +124,13 @@ gridIcons[1].addEventListener("click", () => {
 
 
 let categoriesHolder = document.querySelector(".categoriesHolder")
-footer = document.querySelector(".footer");
+  footer = document.querySelector(".footer");
 window.addEventListener("scroll", function () {
   categoriesHolder.classList.toggle("active", window.scrollY > 300);
 },);
 window.addEventListener("scroll", function () {
   categoriesHolder.classList.toggle("delete", window.scrollY > footer.offsetTop - 1200);
 });
-
-console.log(footer.offsetTop);
 
 let indicator = document.querySelectorAll(".indicator li")
 let indicatorIco = document.querySelectorAll(".indicator i")
@@ -136,6 +165,22 @@ for (let i = 0; i< indicator.length; i++) {
     }
   };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

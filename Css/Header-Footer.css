@@ -228,6 +228,10 @@ input {
   font-size: 17px;
   color: var(--text-color);
   margin: 10px 0 3px;
+  transition: 0.3s;
+}
+.main-card h3:hover {
+  color: var(--main-color);
 }
 .main-card .holder {
   padding: 28px;
@@ -574,7 +578,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0 25px;
+  padding: 10px 0 25px;
 }
 .header .navHolder {
   display: flex;
@@ -759,6 +763,7 @@ input {
 }
 .header.sticky .nav-3 {
   position: fixed;
+  padding: 10px;
   top: 0;
   display: flex;
   justify-content: center;
@@ -841,7 +846,7 @@ body.dark .header.sticky .nav-3 {
 
 
 .nav-4 {
-  padding: 17px 0 28px;
+  padding: 10px 0 28px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 23px -5px;
 }
 body.dark .nav-4 {
@@ -1086,7 +1091,7 @@ body.dark .nav-4 {
     visibility: hidden;
     transition: 0.3s;
     opacity: 0;
-    overflow: scroll;
+    overflow: auto;
     max-height: 370px;
   }
   .menu-med {

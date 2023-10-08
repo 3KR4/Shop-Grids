@@ -8,7 +8,20 @@
   overflow: hidden;
   padding-top: 35px;
 }
-
+.categoriesHolder {
+  width: 33% !important;
+}
+.categoriesHolder .categories {
+  min-width: 103%;
+}
+.categoriesHolder.active .categories {
+  min-width: min-content;
+  max-width: 17%;
+}
+.categoriesHolder.delete .categories {
+  max-width: none;
+  min-width: 103%;
+}
 .shop .cont .categories h4 {
   margin-bottom: 16px;
   font-weight: 500;
@@ -413,37 +426,39 @@ input[type="range"]::-moz-range-thumb{
   color: white !important;
 }
 
+
 @media (max-width:1700px) { 
   .categoriesHolder.active .categories {
-    width: 23% !important;
+    min-width: 19% !important;
   }
 }
 @media (max-width:1600px) { 
   .categoriesHolder.active .categories {
-    width: 25% !important;
+    min-width: 20% !important;
   }
 }
 @media (max-width:1500px) { 
   .categoriesHolder.active .categories {
-    width: 26% !important;
+    min-width: 22% !important;
   }
 }
 @media (max-width:1400px) { 
   .categoriesHolder.active .categories {
-    width: 24% !important;
+    min-width: 21% !important;
   }
 }
 @media (max-width:1300px) { 
   .categoriesHolder.active .categories {
-    width: 26% !important;
+    min-width: 22% !important;
   }
 }
 @media (max-width:1200px) { 
   .shop .cont .categoriesHolder.active {
-    width: 60% !important;
+    width: 36% !important;
   }
   .categoriesHolder.active .categories {
-    width: 30% !important;  }
+    width: 35% !important;
+  }
 }
 @media (max-width:1100px) { 
   .categoriesHolder.active .categories {
@@ -452,7 +467,7 @@ input[type="range"]::-moz-range-thumb{
 }
 @media (max-width:1000px) { 
   .categoriesHolder.active .categories {
-    width: 36% !important;
+    min-width: 26% !important;
   }
 }
 @media (max-width:991px) {
@@ -491,6 +506,12 @@ input[type="range"]::-moz-range-thumb{
     height: 25px;
     font-size: 10px;
   }
+  .categoriesHolder.active .categories {
+    min-width: 26% !important;
+  }
+  .shop .cont .categoriesHolder {
+    min-width: 30%;
+  }
 }
 
 @media (min-width:800px) { 
@@ -528,9 +549,6 @@ input[type="range"]::-moz-range-thumb{
   .shop .cont {
     flex-direction: column;
   }
-  .shop .cont .categories {
-    width: 100%;
-  }
   .shop .cont {
     gap: 58px;
   }
@@ -540,7 +558,14 @@ input[type="range"]::-moz-range-thumb{
   .grids {
     display: none;
   }
-  .shop .cont .categories .type a, .shop .cont .categories span {
+  .shop .cont .categories .type a,
+  .shop .cont .categories span {
     font-size: 14px;
+  }
+  .categoriesHolder {
+    min-width: 98% !important;
+  }
+  .shop .cont .categoriesHolder.active {
+    min-width: 386% !important;
   }
 }

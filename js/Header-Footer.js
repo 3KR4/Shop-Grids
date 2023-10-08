@@ -416,7 +416,7 @@ let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول 
 const audioAdd = new Audio();
 audioAdd.src = "../img/click.mp3";
 const audioDelete = new Audio();
-audioDelete.src = "../img/delete.mp3";
+audioDelete.src = "../img/delete-1.mp3";
 
 
   let generateCartHover = () => {   //! لعرض المنتجات المضافة في السلة المتحركة     
@@ -431,7 +431,7 @@ audioDelete.src = "../img/delete.mp3";
           <div class="info">
             <h6>${search.name}</h6>
             <h5 class="type">${search.type}</h5>
-            <p>${search.price},00</p>
+            <p>$${search.price}</p>
           </div>
           <i onclick="removeHoverItem(${id})" class="bi bi-x-lg"></i>
         </div>
