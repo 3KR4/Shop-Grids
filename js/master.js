@@ -1,3 +1,88 @@
+//! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss Landing
+const landSwiper = [
+  { 
+    id: 1034, 
+    value: "Accessories",
+    type: "Watch",
+    name: "M75 Sport Watch",
+    review: "33",
+    price: "320.00",
+    price2: "380.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/watsh.png",
+    imgSingle: "img/All Products/Single/watsh.png",
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+  },
+  { 
+    id: 1035, 
+    value: "Other",
+    type: "Camera",
+    name: "Cctv Camera",
+    review: "604",
+    price: "590.00",
+    price2: "650.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star",
+    img: "img/All Products/camera.png",
+    imgSingle: "img/All Products/Single/camera.png",
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+  },
+  { 
+    id: 1032, 
+    value: "Hardware",
+    type: "Memory",
+    name: "XPG Caster RGB 32GB",
+    review: "26",
+    price: "89.00",
+    price2: "105.00",
+    star1: "fa-solid fa-star",
+    star2: "fa-solid fa-star",
+    star3: "fa-solid fa-star-half-stroke",
+    img: "img/All Products/XPG Caster RGB 32GB  (0).png",
+    imgSingle: "img/All Products/Single/XPG Caster RGB 32GB  (1).png",
+    img1: "img/All Products/Single/XPG Caster RGB 32GB  (1).png",
+    img2: "img/All Products/Single/XPG Caster RGB 32GB  (2).png",
+    img3: "img/All Products/Single/XPG Caster RGB 32GB  (3).png",
+    img4: "img/All Products/Single/XPG Caster RGB 32GB  (4).png",
+    img5: "img/All Products/Single/XPG Caster RGB 32GB  (5).png",
+  },
+];
+let landingSwiper = document.querySelector(".landing .left swiper-container")
+
+function rednderLandSwiper() {
+  let landingItemSwiper = landSwiper.map((x) => {
+    let {id, type, name, review, price, price2, img} = x;
+    return`
+    <swiper-slide>
+    <div class="card">
+      <div>
+        <h5>Big Sale Offer (25%)</h5>
+        <h3>${name}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+        <h5>Now Only <span>$${price}</span> <span class="price2">$${price2}</span></h5>
+        <a  onclick="pushProduct(${id})" class="main-buttom" href="product.html">Shop Now</a>
+      </div>
+      <img src="${img}" alt="">
+      <img class="wave3" src="img/wave3.png" alt="">
+    </div>
+  </swiper-slide>
+    `
+  }).join("") 
+  landingSwiper.innerHTML = landingItemSwiper
+  };
+  rednderLandSwiper();
+
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss categories
 const categories = [
   {
@@ -83,11 +168,11 @@ const categories = [
         <div>
           <h4>${item.mainName}</h4>
           <ul>
-            <li><a href="#">${item.info1}</a></li>
-            <li><a href="">${item.info2}</a></li>
-            <li><a href="">${item.info3}</li>
-            <li><a href="">${item.info4}</li>
-            <li><a href="">See All</a></li>
+            <li><a href="shop.html">${item.info1}</a></li>
+            <li><a href="shop.html">${item.info2}</a></li>
+            <li><a href="shop.html">${item.info3}</li>
+            <li><a href="shop.html">${item.info4}</li>
+            <li><a href="shop.html">See All</a></li>
           </ul>
         </div>
         <img src="${item.img}" alt="">

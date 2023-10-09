@@ -1269,7 +1269,7 @@ body.dark .nav-4 {
     flex-direction: column;
   }
   .follow h3 {
-    z-index: 100;
+    display: none;
   }
 }
 
