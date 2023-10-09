@@ -361,7 +361,7 @@ scrollBar.onclick = function () {
 let basket = JSON.parse(localStorage.getItem("addItem")) || []               // للأعلان الاساسي عن شنطة المنتجات المضافة من كل صفحة
 quantityBasket = JSON.parse(localStorage.getItem("Quantity")) || []         // للأعلان الثانوي عن شنطة الكمية المضافة من كل منتج
 let mainCart = document.querySelector(".cart .main-cart")                  // الهيكل المتحرك للسلة في الهيدر
-let carticon = document.querySelector(".cartNumpers")                  // رقم المنتجات المضافة للسلة المتحركة
+let carticon = document.querySelector(".cartNumpers")                     // رقم المنتجات المضافة للسلة المتحركة
 let cartProductLength = document.querySelector(".main-cart .length")     // الرقم الكلي لعدد المنتجات المضافة للسلة المتحركة
 let cartProductTotal = document.querySelector(".cartProductTotal")      // السعر الكلي للمنتجات المضافة للسلة المتحركة
 let mainCartCards = document.querySelector(".cart .main-cart .cards")  // قائمة المنتجات التي سيوضع بها المنتجات في الجسم المتحرك للسلة
@@ -565,16 +565,3 @@ function closeVideo() {
   video.classList.remove("videoClicked")
   document.body.style.removeProperty("overflow")
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

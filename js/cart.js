@@ -34,7 +34,7 @@ let generateCartItems = () => {  //! لعرض المنتجات المضافة ف
             $${search.price}
           </h3>
           <h3 class="discount col-lg-2">
-            $${searchQuantity === undefined? `${search.price},00` : `${search.price * searchQuantity.item},00`}
+            $${searchQuantity === undefined? `${search.price}` : `${search.price * searchQuantity.item},00`}
           </h3>
           <i onclick="removeItem(${id})" class="bi bi-trash trash col-lg-1"></i>
       </div>

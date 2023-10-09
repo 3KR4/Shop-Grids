@@ -1737,11 +1737,8 @@ body.dark .cart-page .cart-products .card {
   border-bottom: 1px solid var(--main-color);
   color: var(--text-color);
 }
-.cart-page .price {
-
-}
-.cart-page .discount {
-
+.cart-code .Code .Coupon .holder .apply {
+  padding: 26px 0;
 }
 .Code .container {
   display: flex;
@@ -2377,7 +2374,6 @@ header.sticky .dropdown-menu {
     margin: 0;
   }
 }
-
 
 @media (max-width: 600px) {
   .grid .container .video .iframe {

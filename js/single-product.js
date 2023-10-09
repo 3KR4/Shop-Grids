@@ -52,18 +52,3 @@ function chnageToimg5() {
 }
 
 //! ssssssssssssssssssssssssssssssssssssssssssssssssssss increment-decrement
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
