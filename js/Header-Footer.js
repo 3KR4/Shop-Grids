@@ -3,6 +3,10 @@ let header = document.querySelector(".header");
 mainHeader = () => {
   // let search = basket.find((x) => x.id === id) || []
   return (header.innerHTML = `
+  <div class="preLoader">
+  <div></div>
+  <span>Loading...</span>
+  </div>
   <button class="scrollBar"><i class="fa-solid fa-angles-up"></i></button>
   <div class="nav-1">
     <div class="container">
@@ -231,6 +235,11 @@ mainHeader = () => {
 };
 mainHeader();
 
+const loadIcon = document.querySelector(".preLoader")
+window.addEventListener("load", function() {
+  loadIcon.style.display = "none"
+})
+
 let body = document.querySelector("body");
 modeToggle = document.querySelector(".darkLight");
 let getMode = localStorage.getItem("mode");
@@ -250,7 +259,6 @@ function nagi () {
   });
 }
 nagi()
-
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
