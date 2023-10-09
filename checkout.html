@@ -183,46 +183,35 @@
                   </div>
                 </div>
             </div>
-            <div class="Code">
-              <div class="Coupon">
-                <div class="holder">
-                  <p>Appy Coupon to get discount!</p>
-                  <div class="ptn">
-                    <input type="text" placeholder="Coupon Code">
-                    <button class="main-buttom apply">APPLY</button>
+            <div class="coodes">
+              <div class="Code">
+                <div class="container">
+                  <div class="Coupon">
+                    <div class="holder">
+                      <p>Appy Coupon to get discount!</p>
+                      <div class="ptn">
+                        <input type="text" placeholder="Coupon Code">
+                        <button class="main-buttom apply">APPLY</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Coupon">
+                      <div class="product">
+                        <h6>Pricing Table</h2>
+                        <div class="productsNameHolder">
+                          
+                        </div>
+                        <h5>
+                          <span class="final-span">Total Order Price</span>
+                          <span class="finalPrice">0</span>
+                        </h5>
+                        </div>
+                        <a class="main-buttom" href="success.html">Place Oredr</a>
+                      </div>
+        
                   </div>
                 </div>
               </div>
-              <div class="Coupon">
-                  <div class="product">
-                    <h6>Pricing Table</h2>
-                    <div>
-                      <span>Product</span>
-                      <span>Total</span>
-                    </div>
-                    <div>
-                      <span>Top Up T-Shirt x 1</span>
-                      <span>150 LE</span>
-                    </div>
-                    <div>
-                      <span>Polo Shirt x 1</span>
-                      <span>1600 LE</span>
-                    </div>
-                    <div>
-                      <span>Cart Subtotal	</span>
-                      <span>1750 LE</span>
-                    </div>
-                    <div>
-                      <span class="final-span">Order Total</span>
-                      <span>1950 LE</span>
-                    </div>
-                  </div>
-                  <a class="main-buttom" href="/thank.html">Place Order</a>
-              </div>
-              <div style="margin-bottom: 40px;" class="Coupon">
-                <img class="mainImg" src="img/checkOut-bundle.png" alt="">
-              </div>
-            </div>
           </div>
       </div>
     </div>
@@ -240,29 +229,9 @@
       background-color: var(--input-color3);
     }
   </style>
-  <script>
-    let collapsBtn = document.querySelectorAll(".checkOut .collapssss")
-    let collapsIco = document.querySelectorAll(".checkOut .collapssss i")
-    let checkOut = document.querySelectorAll(".checkOut .form .contacts")
-
-  function collapsClick(checkOutview, iconRotate, collapsBtns) {
-    checkOut.forEach((contact) => {
-      contact.classList.remove("active")
-      checkOutview.classList.add("active")
-    })
-    collapsBtn.forEach((btn) => {
-      btn.classList.remove("active")
-      collapsBtns.classList.add("active")
-    })
-    collapsIco.forEach((ico) => {
-      ico.classList.remove("active")
-      iconRotate.classList.add("active")
-    })
-  }
-  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/Products.js"></script>
+  <script src="js/checkout.js"></script>
   <script src="js/Header-Footer.js"></script>
-  <script src="js/master.js"></script>
 </body>
 </html>

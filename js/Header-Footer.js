@@ -456,13 +456,14 @@ audioDelete.src = "../img/delete-1.mp3";
     update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
     generateCartHover()  // لحذف المنتجات المحذوفة من العربة المتحركة تلقائي
     audioDelete.play()
+    totalAmount()
+    generateCartNames()
   }
 
   let productBasket = JSON.parse(localStorage.getItem("Product")) || []   
   let pushProduct = (id) => {  //! لحفظ بيانات المنتج بالضغط عليه للدخول علي صفحة المنتج  
     localStorage.setItem("Product", id)
   }
-
 
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
 
@@ -564,6 +565,10 @@ function closeVideo() {
   video.classList.remove("videoClicked")
   document.body.style.removeProperty("overflow")
 }
+
+
+
+
 
 
 

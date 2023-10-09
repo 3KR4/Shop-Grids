@@ -34,7 +34,7 @@ let generateCartItems = () => {  //! لعرض المنتجات المضافة ف
             $${search.price}
           </h3>
           <h3 class="discount col-lg-2">
-            $${searchQuantity === undefined? search.price : search.price * searchQuantity.item}
+            $${searchQuantity === undefined? `${search.price},00` : `${search.price * searchQuantity.item},00`}
           </h3>
           <i onclick="removeItem(${id})" class="bi bi-trash trash col-lg-1"></i>
       </div>
@@ -100,29 +100,4 @@ let removeItem = (id) => {          //! cart   لحذف العنصر عند ال
   removeHoverItem(id)
   
 }
-let generateCartNames = () => {
-  return (productsNameHolder.innerHTML = basket.map((x) => {
-    let {id, item} = x
-      let search = allProducts.find((y) => y.id === id) || []
-      let searchQuantity = quantityBasket.find((x) => x.id === id)
-      
-      return `
-      <div id=${id}>
-        <span>${search.name} <h6>x${searchQuantity === undefined ? 1 : searchQuantity.item}</h6></span>
-        <span>$ ${searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item},00</span>
-      </div>
-      `
-    }).join(""))}
-generateCartNames()  // للتحديث التلقائي لخانة اسامي المنتجات في عربة المشتريات عند تحديث الصفحة
 
-let totalAmount = () => {         //! cart   لتحديث خانة السعر النهائي 
-  let amout = basket.map((x) => {
-    let {id, item} = x
-    let search = allProducts.find((y) => y.id === id)
-    let searchQuantity = quantityBasket.find((x) => x.id === id)
-
-    return searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item
-  }).reduce((x, y) => x + y,0)
-  finalPrice.innerHTML = `$ ${amout},00`
-}
-totalAmount()     // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
