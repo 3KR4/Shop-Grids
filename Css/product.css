@@ -123,6 +123,15 @@
   color: white;
   background: var(--main-color);
 }
+.top-area .produt-info .buttons button.add:hover {
+  background-color:var(--hover-color);
+}
+.cart-page {
+  margin: 20px 0;
+}
+.cart-page .icons {
+  left: 0;
+}
 .big-area {
   display: flex;
   gap: 90px;

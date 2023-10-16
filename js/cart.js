@@ -98,6 +98,5 @@ let removeItem = (id) => {          //! cart   لحذف العنصر عند ال
   update(id)           // للتحديث التلقائي لعدد المنتجات في العربة عند حذف اي منتنج     
   generateCartItems()  // للتحديث التلقائي للمنتجات المعروضة في صفحة العربة
   removeHoverItem(id)
-  
 }
 

@@ -2,7 +2,6 @@ let produvctId = localStorage.getItem("Product")
 let search = allProducts.find((y) => y.id == produvctId)
 
 let productImages = document.querySelector(".single-product .top-area");
-
 let renderImages = () => {
 
   productImages.innerHTML = `
@@ -24,7 +23,7 @@ let renderImages = () => {
       <h3 class="price"> <span>$${search.price}</span> <del>$${search.price2}</del></h3>
       <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <div class="buttons">
-          <button onclick="increment(${produvctId})" class="main-buttom add">Add To Cart</button>
+          <button onclick="increment(${search.id})" class="main-buttom add">Add To Cart</button>
           <button class="main-buttom"> <i class="fa-solid fa-rotate"></i> <span> Compare</span></button>
           <button class="main-buttom"><i class="fa-regular fa-heart"></i> <span> To Wishlist</span></button>
       </div>
@@ -53,3 +52,4 @@ function chnageToimg5() {
 }
 
 //! ssssssssssssssssssssssssssssssssssssssssssssssssssss increment-decrement
+

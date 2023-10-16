@@ -241,11 +241,11 @@ window.addEventListener("load", function() {
 })
 
 let body = document.querySelector("body");
-modeToggle = document.querySelector(".darkLight");
-let getMode = localStorage.getItem("mode");
+let modeToggle = document.querySelector(".darkLight");
 
-function nagi () {
-  if (getMode === "dark-mode") {
+
+function darkMode () {
+  if (localStorage.getItem("mode") === "dark-mode") {
     body.classList.add("dark");
   }
   modeToggle.addEventListener("click", () => {
@@ -258,7 +258,7 @@ function nagi () {
     }
   });
 }
-nagi()
+darkMode()
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
@@ -413,10 +413,10 @@ audioDelete.src = "../img/delete-1.mp3";
       let {id, item} = x
       let search = allProducts.find((y) => y.id === id)
       let searchQuantity = quantityBasket.find((x) => x.id === id)
-  
+
       return searchQuantity === undefined ? search.price * 1 : search.price * searchQuantity.item
     }).reduce((x, y) => x + y,0)
-    cartProductTotal.textContent = `$ ${amout},00`
+    cartProductTotal.textContent = `$${amout},00`
   }
   totalPriceHover()     // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
 
@@ -435,12 +435,12 @@ audioDelete.src = "../img/delete-1.mp3";
   localStorage.setItem("addItem", JSON.stringify(basket))
   update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
   generateCartHover()  // لعرض المنتجات المضافة في العربة المتحركة في الصفحة تلقائي
+  calculation()
   }
 
   let update = (id) => {  //! لاضافة منتج جديد في السلة عند الضغط عليه 
     let search = basket.find((x) => x.id === id) 
-    calculation(carticon[0])
-    calculation(carticon[1])
+    calculation()
     cartLength()        // لتحديث عدد العناصر الموجودة في العربة المتحركى تلقأئيا
     totalPriceHover()  // للتحديث التلقائي لخانة السعر النهائي في عربة المشتريات عند تحديث الصفحة  
   }
@@ -456,8 +456,7 @@ audioDelete.src = "../img/delete-1.mp3";
     update(id)            // لزيادة رقم العربة عند اضافة منتج تلقائيا
     generateCartHover()  // لحذف المنتجات المحذوفة من العربة المتحركة تلقائي
     audioDelete.play()
-    totalAmount()
-    generateCartNames()
+
   }
 
   let productBasket = JSON.parse(localStorage.getItem("Product")) || []   
@@ -465,6 +464,7 @@ audioDelete.src = "../img/delete-1.mp3";
     localStorage.setItem("Product", id)
   }
 
+  
 //! sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss footer
 
 let footer = document.querySelector(".footer");
