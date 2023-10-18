@@ -724,7 +724,7 @@ textarea {
 }
 .dropdown-menu {
   background: var(--input-color);
-  transform: translate(0px, 40px) !important;
+  transform: translate(0px, 52px) !important;
   padding: 15px 0;
   border: none;
   width: 200px;
