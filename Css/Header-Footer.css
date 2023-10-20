@@ -52,10 +52,7 @@ html {
 a {
     text-decoration: none;
 }                                                                   
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-}
-p {
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 ul {
@@ -632,6 +629,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 .header .nav-3 .categories {
   display: flex;

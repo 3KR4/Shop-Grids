@@ -240,16 +240,41 @@ window.addEventListener("load", function() {
   loadIcon.style.display = "none"
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let body = document.querySelector("body");
-let modeToggle = document.querySelector(".darkLight");
+let darkLight = document.querySelector(".darkLight");
 
 
 function darkMode () {
+
+
   if (localStorage.getItem("mode") === "dark-mode") {
     body.classList.add("dark");
+    darkLight.classList.add("active")
   }
-  modeToggle.addEventListener("click", () => {
-    modeToggle.classList.toggle("active");
+
+  darkLight.addEventListener("click", () => {
+    darkLight.classList.toggle("active");
     body.classList.toggle("dark");
     if (!body.classList.contains("dark")) {
       localStorage.setItem("mode", "light-mode");
@@ -258,7 +283,38 @@ function darkMode () {
     }
   });
 }
+
 darkMode()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let navLink = document.querySelector(".nav-3 .nav-link") 
 let bar1 = document.querySelector(".bar1") 
@@ -368,6 +424,7 @@ let mainCartCards = document.querySelector(".cart .main-cart .cards")  // قائ
 let mainCartDiv = document.querySelector(".cart .main-cart > div")    // اول شنطة في الهيكل المتحرك التي سيوضع فيها اما المنتجات المضافة او رسالة السلة فارغة
 const audioAdd = new Audio();
 audioAdd.src = "../img/click.mp3";
+
 const audioDelete = new Audio();
 audioDelete.src = "../img/delete-1.mp3";
 
