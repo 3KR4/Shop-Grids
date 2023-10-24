@@ -50,6 +50,3 @@ function chnageToimg4() {
 function chnageToimg5() {
   document.querySelector(".main-image").src= search.img5;
 }
-
-//! ssssssssssssssssssssssssssssssssssssssssssssssssssss increment-decrement
-

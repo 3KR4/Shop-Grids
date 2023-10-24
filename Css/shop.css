@@ -568,4 +568,17 @@ input[type="range"]::-moz-range-thumb{
   .shop .cont .categoriesHolder.active {
     min-width: 386% !important;
   }
+  .shop .shop-all .cards {
+    grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  }
+  .review {
+    flex-direction: column;
+  }
+  .main-card h3 {
+    font-size: 11px;
+    margin: 4px 0 3px;
+  }
+  .main-card h4 {
+    padding: 0px 28px 17px;
+  }
 }

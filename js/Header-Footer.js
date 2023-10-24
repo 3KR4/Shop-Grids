@@ -244,30 +244,10 @@ window.addEventListener("load", function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let body = document.querySelector("body");
 let darkLight = document.querySelector(".darkLight");
 
-
 function darkMode () {
-
-
   if (localStorage.getItem("mode") === "dark-mode") {
     body.classList.add("dark");
     darkLight.classList.add("active")
@@ -285,34 +265,6 @@ function darkMode () {
 }
 
 darkMode()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
