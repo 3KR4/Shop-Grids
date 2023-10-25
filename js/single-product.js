@@ -35,18 +35,19 @@ renderImages();
 
 //! ssssssssssssssssssssssssssssssssssssssssssssssssssss Change Product Images
 
+let mainImage = document.querySelector(".main-image")
 function chnageToimg1() {
-  document.querySelector(".main-image").src= search.img1;
+  mainImage.src= search.img1;
 }
 function chnageToimg2() {
-  document.querySelector(".main-image").src= search.img2;
+  mainImage.src= search.img2;
 }
 function chnageToimg3() {
-  document.querySelector(".main-image").src= search.img3;
+  mainImage.src= search.img3;
 }
 function chnageToimg4() {
-  document.querySelector(".main-image").src= search.img4;
+  mainImage.src= search.img4;
 }
 function chnageToimg5() {
-  document.querySelector(".main-image").src= search.img5;
+  mainImage.src= search.img5;
 }

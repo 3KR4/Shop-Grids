@@ -1238,7 +1238,7 @@ body.dark .nav-4 {
     padding: 0;
   }
   .header .nav-2 {
-    padding: 10px 0 25px; 
+    padding: 10px 0 16px; 
   }
   .header .nav-3 {
     padding: 10px 0; 
@@ -1247,7 +1247,7 @@ body.dark .nav-4 {
     display: none;
   }
   .header .nav-2 .logo {
-    font-size: 25px;
+    font-size: 22px;
   }
   .header .nav-3 .follow h3 {
     display: none;
@@ -1263,7 +1263,7 @@ body.dark .nav-4 {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    padding: 30px 0;
+    padding: 0px 0 19px;
   } 
   .menu-med {
     display: none;
@@ -1273,6 +1273,9 @@ body.dark .nav-4 {
   }
   .follow h3 {
     display: none;
+  }
+  .follow {
+    gap: 9px;
   }
 }
 .header.sticky .navHolder {
