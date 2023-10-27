@@ -235,16 +235,20 @@ mainHeader = () => {
 };
 mainHeader();
 
+let body = document.querySelector("body");
+let stiky = document.querySelector(".nav-3") 
+console.log(stiky);
 const loadIcon = document.querySelector(".preLoader")
 window.addEventListener("load", function() {
   loadIcon.style.display = "none"
+  body.style.overflow = "auto"
+  stiky.style.zIndex = "1000"
 })
 
 
 
 
 
-let body = document.querySelector("body");
 let darkLight = document.querySelector(".darkLight");
 
 function darkMode () {
